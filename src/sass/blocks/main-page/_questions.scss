@@ -1,0 +1,15 @@
+.questions{
+    padding: 140px 0 120px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__descr{
+        margin: 35px 0 20px 0;
+        max-width: 305px;
+    }
+    &__img-wrapper{
+        padding-right: 84px;
+    }
+}

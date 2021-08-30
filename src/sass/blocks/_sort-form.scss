@@ -1,0 +1,59 @@
+.sort-form{
+    max-width: 285px;
+    &__title{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 12px;
+        &_big-mb{
+            @include sort-form-mb;
+        }
+    }
+    &__radius{
+        display: flex;
+        @include sort-form-mb;
+    }
+    &__radius-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $additional-color; 
+        border-right: none;  
+        cursor: pointer;
+        &:first-child{
+            border-radius: 7px 0 0 7px;
+        }
+        &:last-child{
+            border-right: 1px solid $additional-color;  
+            border-radius: 0 7px 7px 0;
+        }
+        &:hover{
+            background-color: $additional-hover;
+        }
+        &_selected{
+            background-color: $additional-color;
+            color: #fff;
+            &:hover{
+                background-color: $additional-color;
+            }
+        }
+
+    }
+    &__plus{
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        //add this in object-svg for cursor pointer
+        pointer-events: none;
+    }
+    &__double-range-slider{
+        display: block;
+        margin-top: 22px;
+    }
+    &__search-input{
+        @include sort-form-mb;
+    }
+}

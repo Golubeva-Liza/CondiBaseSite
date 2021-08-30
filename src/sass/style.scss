@@ -1,0 +1,119 @@
+@import 'base/reset';
+@import 'base/vars';
+@import 'base/mixins';
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: $text-color;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main {
+    flex: 1 0 auto;
+    //header-height
+    margin-top: 90px;
+}
+.footer{
+    flex: 0 0 auto;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-container{
+    max-width: 996px;
+    margin: 0 auto;
+}
+.h1{
+    font-family: $second-font;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 47px;
+}
+.h2 {
+    font-family: $second-font;
+    font-weight: 600;
+    font-size: 35px;
+}
+.underline {
+    text-decoration: underline;
+}
+
+
+//blocks
+.value-box{
+    display: flex;
+    width: 97px;
+    height: 30px;
+    padding: 4px 10px;
+    border: 1px solid $additional-color;
+    border-radius: 7px;
+    &__input{
+        font-weight: 600;
+        width: 100%;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none; 
+        }
+        &:hover,
+        &:focus {
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+    }
+    &__span{
+        padding-right: 5px;
+        &:last-child{
+            padding-left: 5px;
+            padding-right: 0px;
+            transform: translateY(1px);
+        }
+    }
+}
+.search-input{
+    width: 204px;
+    height: 30px;
+    background: #F7F7F7;
+    border-radius: 7px;
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+}
+
+
+//more blocks
+@import 'blocks/btns';
+@import 'blocks/cakes-card';
+@import 'blocks/sort-form';
+@import 'blocks/check-form';
+@import 'blocks/double-range-slider';
+
+
+
+//header&footer
+@import "blocks/header";
+@import "blocks/footer";
+
+
+//main page
+@import "blocks/main-page/first-screen";
+@import "blocks/main-page/about";
+@import "blocks/main-page/which-cakes";
+@import "blocks/main-page/questions";
+
+//other pages
+@import "blocks/result-search/result-search";

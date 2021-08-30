@@ -1,0 +1,16 @@
+@mixin font-weight-300 {
+    font-weight: 300;
+  }
+
+@mixin sort-form-mb {
+    margin-bottom: 20px;
+  }
+
+@mixin double-range-slider-circles {
+  height: 18px;
+  width: 18px;
+  background-color: $additional-color;
+  cursor: pointer;
+  border-radius: 50%;
+  // pointer-events: auto;
+}

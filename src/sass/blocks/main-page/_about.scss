@@ -1,0 +1,20 @@
+.about-bg{
+    background: linear-gradient(180deg, #FCFCFC 0%, #FFECEF 64.06%);
+    height: 1070px;
+}
+.about{
+    padding: 60px 0 70px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img{
+        width: 331px;
+        height: 283px;
+        margin-right: 75px;
+    }
+    &__h2{
+        margin-bottom: 35px;
+    }
+}

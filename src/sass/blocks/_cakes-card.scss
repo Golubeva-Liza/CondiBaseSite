@@ -1,0 +1,40 @@
+.cakes-card{
+    width: 240px;
+    height: 244px;
+    padding: 30px 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+    border-radius: 13px;
+    position: relative;
+    &__icon{
+        width: 64px;
+        height: 64px;
+    }
+    &__title{
+        font-family: $second-font;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 55px;
+    }
+    &__descr{
+        @include font-weight-300;
+        position: absolute;
+        bottom: 30px;
+    }
+    &__arrow{
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        display: none;
+    }
+    &_main{
+        width: 386px;
+        background: $additional-color;
+        .cakes-card__title, .cakes-card__descr{
+            color: #fff;
+        }
+        .cakes-card__arrow{
+            display: block;
+        }
+    }
+}

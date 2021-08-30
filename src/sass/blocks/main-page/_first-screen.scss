@@ -1,0 +1,31 @@
+.first-screen{
+    min-height: 610px;
+    background: $bgr-color;
+    padding: 70px 0 85px 0;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__item{
+        max-width: 386px;
+        margin-top: 90px;
+    }
+    &__picture{
+        width: 600px;
+        height: 455px;
+        position: absolute;
+        top: 0;
+        right: -42px;
+        display: inline-block;
+        margin-left: 55px;
+    }
+    &__descr{
+        margin-top: 35px;
+        min-width: 310px;
+    }
+    &__btn{
+        margin-top: 45px;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>CondiBase</title>
+</head>
+<body>
+    <div class="wrapper" >
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__item">
+                        <div class="header__logo-wrapper">
+                            <img class="logo header__logo" src="logo/logo.svg" alt="logo">
+                        </div>
+                        <div class="header__about-service">
+                            О серсисе
+                        </div>
+                    </div>     
+                    <div class="header__item">
+                        <div class="header__search-base">
+                            <div class="header__search-item">
+                                <div class="header__search-title">Местоположение</div>
+                                <div class="header__search-subtitle">Где нужен торт?</div>
+                            </div>
+                            <div class="header__search-line"></div>
+                            <div class="header__search-item">
+                                <div class="header__search-title">Дата</div>
+                                <div class="header__search-subtitle">К какому дню?</div>
+                            </div>
+                            <div class="header__search-line"></div>
+                            <div class="header__search-item">
+                                <div class="header__search-title">Особенности</div>
+                                <div class="header__search-subtitle">Какой нужен торт?</div>
+                            </div>
+                            <div class="header__search-circle">
+                                <img class="header__search-icon" src="icons/search.svg" alt="">
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="header__item">
+                        <a class="header__resume" href="#">Разместить резюме</a>
+                        <div class="header__account">
+                            <a class="header__gamburger" href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <a class="header__user" href="#">
+                                <img class="header__user-icon" src="icons/profile.svg" alt="">
+                            </a>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="first-screen">
+                <div class="main-container">
+                    <div class="first-screen__wrapper">
+                        <div class="first-screen__item">
+                            <h1 class="h1">
+                                База домашних кондитеров
+                            </h1>
+                            <div class="first-screen__descr">
+                                Поможем найти кондитеров в своем городе и заказать сладости к определенному дню
+                            </div>
+                            <a class="first-screen__btn" href="result-search.html" target="_blank">
+                                <button class="button" type="button">
+                                    Найти кондитера
+                                </button>
+                            </a>
+                        </div>
+                        <img class="first-screen__picture" src="img/main-cake.svg" alt="cake">
+                    </div>
+                </div>
+            </section>
+
+            <div class="about-bg">
+                <div class="main-container">
+                    <section class="about">
+                        <div class="about__wrapper">
+                            <img class="about__img" src="img/about-img.svg" alt="about">
+                            <div class="about__item">
+                                <h2 class="h2 about__h2">О сервисе CondiBase</h2>
+                                Помогаем домашним кондитерам найти заказчиков, а заказчикам специалистов в домашней выпечке.  Подберите кондитера по рейтингу, местоположению,  уровню профессионализма, стоимости услуг и другим критериям. 
+                                <br><br>
+                                Гарантируем безопасность и сохранность средств для кондитеров и заказчиков при оформлении заказа через сайт.
+                                <br><br>
+                                <a class="underline about__how-it-works" href="#">Как это работает?</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="which-cakes">
+                        <div class="which-cakes__item">
+                            <h2 class="h2 which-cakes__h2">Какие торты ищут</h2>
+                            <div class="which-cakes__descr">
+                                Вы можете отобразить домашних кондитеров, которые готовят особенные торты 
+                            </div>
+                            <div class="cakes-card cakes-card_main">
+                                <img class="cakes-card__icon" src="icons/which-cakes/for-child.svg" alt="for child">
+                                <div class="cakes-card__title">Детские</div>
+                                <div class="cakes-card__descr">от 1000 р/кг</div>
+                                <a href="#"><img class="cakes-card__arrow" src="icons/arrow.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                        <div class="which-cakes__item">
+                            <div class="cakes-card which-cakes__card-mt">
+                                <img class="cakes-card__icon" src="icons/which-cakes/birthday-cake.svg" alt="birthday cake">
+                                <div class="cakes-card__title">Праздничные</div>
+                                <div class="cakes-card__descr">от 1000 р/кг</div>
+                                <a href="#"><img class="cakes-card__arrow" src="icons/arrow.svg" alt="arrow"></a>
+                            </div>
+                            <div class="cakes-card which-cakes__card-mt">
+                                <img class="cakes-card__icon" src="icons/which-cakes/plant.svg" alt="plant">
+                                <div class="cakes-card__title">Без животных продуктов</div>
+                                <div class="cakes-card__descr">от 1200 р/кг</div>
+                                <a href="#"><img class="cakes-card__arrow" src="icons/arrow.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                        <div class="which-cakes__item">
+                            <div class="cakes-card">
+                                <img class="cakes-card__icon" src="icons/which-cakes/for-diet.svg" alt="for diet">
+                                <div class="cakes-card__title">Низкокалорийные (диетические)</div>
+                                <div class="cakes-card__descr">от 1000 р/кг</div>
+                                <a href="#"><img class="cakes-card__arrow" src="icons/arrow.svg" alt="arrow"></a>
+                            </div>
+                            <div class="cakes-card which-cakes__card-mt">
+                                <img class="cakes-card__icon" src="icons/which-cakes/love.svg" alt="love">
+                                <div class="cakes-card__title">Свадебные</div>
+                                <div class="cakes-card__descr">от 1500 р/кг</div>
+                                <a href="#"><img class="cakes-card__arrow" src="icons/arrow.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <section class="questions">
+                <div class="main-container">
+                    <div class="questions__wrapper">
+                        <div class="questions__text">
+                            <h2 class="h2">Остались вопросы?</h2>
+                            <div class="questions__descr">
+                                Наши специалисты готовы ответить на них и помочь с возникшими трудностями
+                            </div>
+                            <a href="#" class="underline questions__chat">
+                                Перейти в чат со специалистом
+                            </a>
+                        </div>
+                        <div class="questions__img-wrapper">
+                            <img class="questions__img" src="img/questions.svg" alt="questions">
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__item">
+                        <div class="footer__social-logo-wrapper">
+                            <img class="logo footer__logo" src="logo/logo.svg" alt="logo">
+                            <div class="footer__social">
+                                <a class="footer__social-icon" href="#">
+                                    <img src="icons/social/instagram.svg" alt="instagram">
+                                </a>
+                                <a class="footer__social-icon" href="#">
+                                    <img src="icons/social/vk.svg" alt="vk">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item footer__menu-title">
+                                    <a class="footer__menu-list-link" href="#">О сервисе</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Как это работает</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Гарантия</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Работа</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Отзывы</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item footer__menu-title">
+                                    <a class="footer__menu-list-link" href="#">Расскажите о себе</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Разместить профиль кондитера</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Поделиться профилем в социальных сетях</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Оставить отзыв</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item footer__menu-title">
+                                    <a class="footer__menu-list-link" href="#">Настройки и управление</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Редактировать профиль</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Управлять заказами</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Личный календарь</a>
+                                </li>
+                                <button class="button footer__btn">
+                                    <div class="footer__btn-content">
+                                        Найти кондитера
+                                        <object class="footer__btn-arrow" type="image/svg+xml" data="icons/arrow.svg" id='object'></object>
+                                    </div>
+                                </button>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item footer__menu-title">
+                                    <a class="footer__menu-list-link" href="#">Поддержка</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Центр помощи</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Об отмене заказа</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Доверие и безопасность</a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a class="footer__menu-list-link" href="#">Диалоги</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
