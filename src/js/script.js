@@ -6,7 +6,7 @@
 window.onload = function(){
     slideOne();
     slideTwo();
-}
+};
 
 let sliderOne = document.getElementById("range-slider-1");
 let sliderTwo = document.getElementById("range-slider-2");
@@ -73,3 +73,183 @@ displayValues.forEach((input, i) => {
 
     });
 });
+
+
+
+
+
+//____________________castomize select________________________________________
+const selectHeader = document.querySelectorAll('.select-block__header');
+const selectItems = document.querySelectorAll('.select-block__item');
+
+const selectToggle = function() {
+    this.parentElement.classList.toggle('select-block__inner_active');
+};
+
+const selectChoose = function() {
+    let parent = this.closest('.select-block__inner');
+    let currentText = parent.querySelector('.select-block__current');
+    currentText.innerText = this.innerText;
+    parent.classList.remove('select-block__inner_active');
+
+};
+
+const select = function (){
+    selectHeader.forEach(item => {
+        item.addEventListener('click', selectToggle);
+    });
+
+    selectItems.forEach(item => {
+        item.addEventListener('click', selectChoose);
+    });
+};
+
+select();
+
+
+
+
+//____________________slick slider_______________________________________
+
+$(document).ready(function(){
+    $('.slider').slick({
+        arrows: true,
+        slidesToShow: 3,
+        speed: 500,
+        //прокрутка слайдов на пк
+        draggable: false,
+        centerMode: true,
+        variableWidth: true,
+    });
+});
+
+
+//____________________шаблонизация карточки кондитера_______________________________________
+const bakerCardsParent = document.querySelector('.result-search__cards-inner');
+
+class BakerCards {
+    //alt - что подставить вместо картинки, если не загрузилась
+    //parent - родительский div (селектор), в который мы будем вставлять карточку
+    //rest параметр не содержит default значение
+    constructor (avatar, name, rating, images, level, lenght, price){
+        this.avatar = avatar;
+        this.name = name;
+        this.rating = rating;
+        this.images = images;//массив
+        this.level = level;
+        this.lenght = lenght;
+        this.price = price;
+    }
+
+    writeHtml(){
+        //создаем карточку
+        const element = document.createElement('div');
+        element.classList.add("baker-card", "result-search__baker-card");
+
+        element.innerHTML = `
+        <div class="baker-card__content-inner">
+            <div class="baker-card__baker">
+                <div class="baker-card__baker-avatar">
+                    <img src=${this.avatar} alt="baker">
+                </div>
+                <div class="baker-card__baker-name">
+                    <!-- Менять имя -->
+                    Имя: <span class="baker-card__value">${this.name}</span>
+                </div>
+            </div>
+            <div class="baker-card__rating">
+                <div class="baker-card__like"></div>
+                Рейтинг:
+                <object class="baker-card__star" type="image/svg+xml" data='icons/star.svg' ></object>
+                <!-- менять значение рейтинга -->
+                <span class="baker-card__rating-number baker-card__value">${this.rating}</span>
+            </div>
+        </div>`;
+        
+
+        const bakerWorks = document.createElement('div');
+        bakerWorks.classList.add('slider', 'baker-card__slider');
+        this.images.forEach(imageName => {
+            const cakeImg = document.createElement('div');
+            cakeImg.classList.add("slider__item");
+            cakeImg.innerHTML = `
+                <img src="${imageName}" alt="cake">
+            `;
+            bakerWorks.append(cakeImg);
+        });
+
+        element.append(bakerWorks);
+
+        const bakerInfo = document.createElement('div');
+        bakerInfo.classList.add("baker-card__content-inner");
+        bakerInfo.innerHTML = `
+            <div class="baker-card__info">
+                <div class="baker-card__info-item">
+                    <!-- менять уровень -->
+                    Уровень: <span class="baker-card__value">${this.level}</span>
+                </div>
+                <!-- менять расстояние -->
+                <div class="baker-card__info-item">
+                    Расстояние: <span class="baker-card__value">${this.lenght} км</span>
+                </div>
+                <!-- менять цену -->
+                <div class="baker-card__info-item">
+                    Цена торта, 1кг: <span class="baker-card__value">~${this.price} ₽</span>
+                </div>
+            </div>
+            <div class="baker-card__btn">
+                <div class="button button_v2">Смотреть профиль</div>
+            </div>
+        `;
+        element.append(bakerInfo);
+        bakerCardsParent.append(element);
+    }
+}
+
+new BakerCards(
+    'img/bakers/Maria/ava.jpg',
+    'Мария',
+    4.9,
+    [
+        "img/bakers/Maria/cake1.jpg",
+        "img/bakers/Maria/cake2.jpg",
+        "img/bakers/Maria/cake3.jpg",
+        "img/bakers/Maria/cake4.jpg",
+        "img/bakers/Maria/cake5.jpg",
+    ], 
+    "профи",
+    3,
+    2300 
+).writeHtml();
+
+new BakerCards(
+    'img/bakers/Ekaterina/avatar.jpg',
+    'Екатерина',
+    4.6,
+    [
+        "img/bakers/Ekaterina/cake1.jpg",
+        "img/bakers/Ekaterina/cake2.jpg",
+        "img/bakers/Ekaterina/cake3.jpg",
+        "img/bakers/Ekaterina/cake4.jpg",
+        "img/bakers/Ekaterina/cake5.jpg",
+    ], 
+    "любитель",
+    4,
+    1800
+).writeHtml();
+
+new BakerCards(
+    'img/bakers/Maria/ava.jpg',
+    'Мария',
+    4.9,
+    [
+        "img/bakers/Maria/cake1.jpg",
+        "img/bakers/Maria/cake2.jpg",
+        "img/bakers/Maria/cake3.jpg",
+        "img/bakers/Maria/cake4.jpg",
+        "img/bakers/Maria/cake5.jpg",
+    ], 
+    "профи",
+    3,
+    2300 
+).writeHtml();

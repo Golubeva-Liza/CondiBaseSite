@@ -26,13 +26,7 @@
         cursor: pointer;
         position: relative;
         &::after{
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 6px;
-            background-image: url('../../icons/down-arrow.svg');
-            top: 44%;
-            right: -15px;
+            @include small-down-arrow;
         }
     }
     &__search-base{

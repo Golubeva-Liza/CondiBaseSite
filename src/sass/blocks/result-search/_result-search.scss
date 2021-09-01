@@ -1,5 +1,32 @@
 .result-search{
     display: flex;
     padding: 60px 0;
+    &__answer{
+        // width: 100%;
+        margin-left: 20px;
+    }
+    &__top-inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__how-many-find{
+        font-weight: 300;
+    }
+    &__how-many-find span{
+        font-weight: 400;
+    }
 
+    &__select-inner{
+        position: relative;
+        cursor: pointer;
+    }
+    &__cards-inner{
+        padding-top: 25px;
+    }
+    &__baker-card{
+        margin-bottom: 35px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
 }

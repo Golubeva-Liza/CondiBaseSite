@@ -14,3 +14,17 @@
   border-radius: 50%;
   // pointer-events: auto;
 }
+
+@mixin small-down-arrow{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  background-image: url('../../icons/down-arrow.svg');
+  top: 44%;
+  right: -15px;
+}
+
+@mixin smooth{
+  transition: all 0.3s;
+}

@@ -15,4 +15,24 @@
     border: none;
 
     cursor: pointer;
+    @include smooth;
+
+    &_v2{
+        width: 161px;
+        height: 43px;
+        border: 1px solid $additional-color;
+        background: #fff;
+        color: $additional-color;
+        border-radius: 21px;
+        font-weight: 300;
+        &:hover{
+            background: $additional-color;
+            color: #fff;
+        }
+        &:active{
+            border: 1px solid $additional-hover;
+            background: $additional-hover;
+            color: #fff;
+        }
+    }
 }

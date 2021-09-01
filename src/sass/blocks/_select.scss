@@ -1,0 +1,50 @@
+.select-block{
+    &__select{
+        background: none;
+        border: 0;
+        appearance: none;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__inner{
+        position: relative;
+    }
+    &__inner{
+        position: relative;
+        &_active .select-block__body{
+            display: block;
+        }
+    }
+    &__body{
+        position: absolute;
+        width: 240px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+        border-radius: 13px;
+        padding: 18px 0;
+        display: none;
+        top: 30px;
+        z-index: 90;
+    }
+    &__current{
+        // min-width: 161px;
+        display: block;
+        padding-right: 15px;
+        &::after{
+           @include small-down-arrow;
+           right: 0;
+        }
+        &:active{
+            background: #F7F7F7;
+
+        }
+    }
+    &__item{
+        line-height: 30px;
+        padding: 0 18px;
+        &:hover{
+            background: #F7F7F7;
+        }
+    }
+}
