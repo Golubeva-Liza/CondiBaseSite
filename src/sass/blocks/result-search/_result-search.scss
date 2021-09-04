@@ -25,8 +25,13 @@
     }
     &__baker-card{
         margin-bottom: 35px;
-        &:last-child{
-            margin-bottom: 0px;
-        }
+        // &:last-child{
+        //     margin-bottom: 0px;
+        // }
+    }
+    &__bottom-inner{
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
     }
 }

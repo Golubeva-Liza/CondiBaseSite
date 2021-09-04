@@ -21,7 +21,21 @@
                             <img class="logo header__logo" src="logo/logo.svg" alt="logo">
                         </div>
                         <div class="header__about-service">
-                            О серсисе
+                            <div class="select-block header__select">
+                                <div class="select-block__inner ">
+                                    <div class="select-block__header">
+                                        <span class="select-block__current">О серсисе</span>
+                                        <div class="select-block__icon"></div>
+                                    </div>
+                                    <div class="select-block__body">
+                                        <a href='#'><div class="select-block__item-header">Как работает</div></a>
+                                        <a href='#'><div class="select-block__item-header">Гарантия</div></a>
+                                        <a href='#'><div class="select-block__item-header">Работа</div></a>
+                                        <a href='#'><div class="select-block__item-header">Отзывы</div></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- О серсисе -->
                         </div>
                     </div>     
                     <div class="header__item">
@@ -47,16 +61,29 @@
                     </div>   
                     <div class="header__item">
                         <a class="header__resume" href="#">Разместить резюме</a>
-                        <div class="header__account">
-                            <a class="header__gamburger" href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                            <a class="header__user" href="#">
-                                <img class="header__user-icon" src="icons/profile.svg" alt="">
-                            </a>
+                        <div class="select-block header__user-select">
+                            <div class="select-block__inner ">
+                                <div class="select-block__header">
+                                    <div class="header__account">
+                                        <a class="header__gamburger" href="#">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                        <div class="header__user">
+                                            <img class="header__user-icon" src="icons/profile.svg" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="select-block__body">
+                                    <a href='#'><div class="select-block__item-header">Регистрация/вход</div></a>
+                                    <a href='#'><div class="select-block__item-header">Центр помощи</div></a>
+                                    <a href='#'><div class="select-block__item-header">Доверие и безопасность</div></a>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>   
                 </div>
             </div>
@@ -206,11 +233,26 @@
                             </div>
 
                             <!-- динамическое формирование карточек кондитера -->
-                            <div class="result-search__cards-inner">
+                            <div class="result-search__cards-inner" id='cardsWrapper'>
                                 
                             </div>
-
+                            <div class="list" id="list"></div>
                             <div class="result-search__bottom-inner">
+                                <div class="download-more result-search__download-more">
+                                    <div class="download-more__circle"></div>
+                                    <div class="download-more__circle"></div>
+                                    <div class="download-more__circle"></div>
+                                    <button class="download-more__text">Загрузить больше</button>
+                                </div>
+                                <div class="pagination result-search__pagination">
+                                    <a href="#" class="pagination__back" id="paginationBack">
+                                        <div class="pagination__back-content">назад</div>
+                                    </a>
+                                    <div class="pagenumbers" id="pagination"></div>
+                                    <a href="#" class="pagination__forward" id="paginationForward">
+                                        <div class="pagination__forward-content">вперед</div>
+                                    </a>
+                                </div>
                                 
                             </div>
                         </div>

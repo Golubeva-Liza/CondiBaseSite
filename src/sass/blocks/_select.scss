@@ -6,6 +6,9 @@
         position: relative;
         cursor: pointer;
     }
+    &__header{
+        cursor: pointer;
+    }
 
     &__inner{
         position: relative;
@@ -40,11 +43,15 @@
 
         }
     }
+    &__item-header,
     &__item{
         line-height: 30px;
         padding: 0 18px;
         &:hover{
             background: #F7F7F7;
         }
+    }
+    &__item-header{
+        line-height: 35px;
     }
 }

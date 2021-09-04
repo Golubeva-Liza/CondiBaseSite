@@ -25,9 +25,6 @@
         margin-left: 20px;
         cursor: pointer;
         position: relative;
-        &::after{
-            @include small-down-arrow;
-        }
     }
     &__search-base{
         width: 530px;
@@ -85,6 +82,14 @@
             &:nth-child(2){
                 margin: 4px 0;
             }
+        }
+    }
+
+
+    &__user-select{
+        .select-block__body{
+            right: 0;
+            top: 50px;
         }
     }
 }

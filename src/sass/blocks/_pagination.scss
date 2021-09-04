@@ -1,0 +1,80 @@
+.pagination{
+    display: flex;
+    align-items: center;
+    .pagenumbers{
+        display: flex;
+        margin: 0 25px;
+    }
+
+    &__back,
+    &__forward{
+        @include smooth;
+        position: relative;
+        padding: 0 12px;
+        height: 30px;
+        background: #F7F7F7;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: #E3E3E4;
+        }
+    }
+    
+    &__back{
+        padding-left: 24px;
+    }
+    &__forward{
+        padding-right: 24px;
+    }
+    &__forward-content,
+    &__back-content{
+        line-height: 14px;
+    }
+    &__forward-content::after,
+    &__back-content::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 10px;
+    }
+    &__back-content::after{
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 9L1 5L5 1' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        left: 12px;
+    }
+    &__forward-content::after{
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        right: 12px;
+    }
+
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $additional-color;
+        border-right: none;
+        @include smooth;
+
+        &:first-child{
+            border-radius: 7px 0 0 7px;
+        }
+        &:last-child{
+            border-radius: 0 7px 7px 0;
+            border-right: 1px solid $additional-color;
+        }
+        &:hover{
+            background-color: $additional-hover;
+            color: #fff;
+        }
+    }
+    &__btn.active{
+        background-color: $additional-color;
+        color: #fff;
+    }
+}
