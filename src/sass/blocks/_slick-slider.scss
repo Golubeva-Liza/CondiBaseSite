@@ -85,3 +85,47 @@
         transform: rotate(180deg);
     }
 }
+
+
+.baker-profile__slider{
+    .slider__item{
+        width: 183px;
+        height: 201px;
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 89px;
+        width: 24px;
+        height: 24px;
+        &:hover{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        li{
+            margin: 0 3px;
+            line-height: 0;
+        }
+        li.slick-active button{
+            width: 10px;
+            height: 10px;
+            background: $additional-color;
+        }
+        button{
+            font-size: 0;
+            width: 7px;
+            height: 7px;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            border: none;
+            border-radius: 100%;
+            background: #C4C4C4;
+            cursor: pointer;
+        }
+    }
+}

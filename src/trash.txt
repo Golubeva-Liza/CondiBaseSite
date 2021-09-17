@@ -1,118 +1,182 @@
 <!-- карточка -->
-                                <div class="baker-card result-search__baker-card">
-                                    <div class="baker-card__content-inner">
-                                        <div class="baker-card__baker">
-                                            <div class="baker-card__baker-avatar">
-                                                <img src="img/bakers/Maria/ava.jpg" alt="cake">
-                                            </div>
-                                            <div class="baker-card__baker-name">
-                                                Имя: <span class="baker-card__value">Мария</span>
-                                            </div>
-                                        </div>
-                                        <div class="baker-card__rating">
-                                            <div class="baker-card__like"></div>
-                                            Рейтинг:
-                                            <object class="baker-card__star" type="image/svg+xml" data='icons/star.svg' ></object>
-                                            <span class="baker-card__rating-number baker-card__value">4.9</span>
-                                        </div>
-                                    </div>
+<div class="baker-card result-search__baker-card">
+    <div class="baker-card__content-inner">
+        <div class="baker-card__baker">
+            <div class="baker-card__baker-avatar">
+                <img src="img/bakers/Maria/ava.jpg" alt="cake">
+            </div>
+            <div class="baker-card__baker-name">
+                Имя: <span class="baker-card__value">Мария</span>
+            </div>
+        </div>
+        <div class="baker-card__rating">
+            <div class="baker-card__like"></div>
+            Рейтинг:
+            <object class="baker-card__star" type="image/svg+xml" data='icons/star.svg' ></object>
+            <span class="baker-card__rating-number baker-card__value">4.9</span>
+        </div>
+    </div>
 
-                                    <div class="slider baker-card__slider">
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Maria/cake1.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Maria/cake2.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Maria/cake3.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Maria/cake4.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Maria/cake5.jpg" alt="cake">
-                                        </div>
-                                    </div>
+    <div class="slider baker-card__slider">
+        <div class="slider__item">
+            <img src="img/bakers/Maria/cake1.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Maria/cake2.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Maria/cake3.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Maria/cake4.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Maria/cake5.jpg" alt="cake">
+        </div>
+    </div>
 
-                                    <div class="baker-card__content-inner">
-                                        <div class="baker-card__info">
-                                            <div class="baker-card__info-item">
-                                                Уровень: <span class="baker-card__value">профи</span>
-                                            </div>
-                                            <div class="baker-card__info-item">
-                                                Расстояние: <span class="baker-card__value">3 км</span>
-                                            </div>
-                                            <div class="baker-card__info-item">
-                                                Цена торта, 1кг: <span class="baker-card__value">~2300 ₽</span>
-                                            </div>
-                                        </div>
-                                        <div class="baker-card__btn">
-                                            <div class="button button_v2">Смотреть профиль</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- карточка -->
-                                <div class="baker-card result-search__baker-card">
-                                    <div class="baker-card__content-inner">
-                                        <div class="baker-card__baker">
-                                            <div class="baker-card__baker-avatar">
-                                                <img src="img/bakers/Ekaterina/avatar.jpg" alt="cake">
-                                            </div>
-                                            <div class="baker-card__baker-name">
-                                                <!-- Менять имя -->
-                                                Имя: <span class="baker-card__value">Екатерина</span>
-                                            </div>
-                                        </div>
-                                        <div class="baker-card__rating">
-                                            <div class="baker-card__like"></div>
-                                            Рейтинг:
-                                            <object class="baker-card__star" type="image/svg+xml" data='icons/star.svg' ></object>
-                                            <!-- менять значение рейтинга -->
-                                            <span class="baker-card__rating-number baker-card__value">4.6</span>
-                                        </div>
-                                    </div>
+    <div class="baker-card__content-inner">
+        <div class="baker-card__info">
+            <div class="baker-card__info-item">
+                Уровень: <span class="baker-card__value">профи</span>
+            </div>
+            <div class="baker-card__info-item">
+                Расстояние: <span class="baker-card__value">3 км</span>
+            </div>
+            <div class="baker-card__info-item">
+                Цена торта, 1кг: <span class="baker-card__value">~2300 ₽</span>
+            </div>
+        </div>
+        <div class="baker-card__btn">
+            <div class="button button_v2">Смотреть профиль</div>
+        </div>
+    </div>
+</div>
+<!-- карточка -->
+<div class="baker-card result-search__baker-card">
+    <div class="baker-card__content-inner">
+        <div class="baker-card__baker">
+            <div class="baker-card__baker-avatar">
+                <img src="img/bakers/Ekaterina/avatar.jpg" alt="cake">
+            </div>
+            <div class="baker-card__baker-name">
+                <!-- Менять имя -->
+                Имя: <span class="baker-card__value">Екатерина</span>
+            </div>
+        </div>
+        <div class="baker-card__rating">
+            <div class="baker-card__like"></div>
+            Рейтинг:
+            <object class="baker-card__star" type="image/svg+xml" data='icons/star.svg' ></object>
+            <!-- менять значение рейтинга -->
+            <span class="baker-card__rating-number baker-card__value">4.6</span>
+        </div>
+    </div>
 
-                                    <div class="slider baker-card__slider">
-                                        <!-- менять пути к картинкам -->
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake1.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake2.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake3.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake4.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake5.jpg" alt="cake">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img src="img/bakers/Ekaterina/cake6.jpg" alt="cake">
-                                        </div>
-                                    </div>
+    <div class="slider baker-card__slider">
+        <!-- менять пути к картинкам -->
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake1.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake2.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake3.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake4.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake5.jpg" alt="cake">
+        </div>
+        <div class="slider__item">
+            <img src="img/bakers/Ekaterina/cake6.jpg" alt="cake">
+        </div>
+    </div>
 
-                                    <div class="baker-card__content-inner">
-                                        <div class="baker-card__info">
-                                            <div class="baker-card__info-item">
-                                                <!-- менять уровень -->
-                                                Уровень: <span class="baker-card__value">любитель</span>
-                                            </div>
-                                            <!-- менять расстояние -->
-                                            <div class="baker-card__info-item">
-                                                Расстояние: <span class="baker-card__value">4 км</span>
-                                            </div>
-                                            <!-- менять цену -->
-                                            <div class="baker-card__info-item">
-                                                Цена торта, 1кг: <span class="baker-card__value">~1800 ₽</span>
-                                            </div>
-                                        </div>
-                                        <div class="baker-card__btn">
-                                            <div class="button button_v2">Смотреть профиль</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+    <div class="baker-card__content-inner">
+        <div class="baker-card__info">
+            <div class="baker-card__info-item">
+                <!-- менять уровень -->
+                Уровень: <span class="baker-card__value">любитель</span>
+            </div>
+            <!-- менять расстояние -->
+            <div class="baker-card__info-item">
+                Расстояние: <span class="baker-card__value">4 км</span>
+            </div>
+            <!-- менять цену -->
+            <div class="baker-card__info-item">
+                Цена торта, 1кг: <span class="baker-card__value">~1800 ₽</span>
+            </div>
+        </div>
+        <div class="baker-card__btn">
+            <div class="button button_v2">Смотреть профиль</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- комментарий -->
+<div class="comment baker-feedback__comment">
+    <div class="comment__top">
+        <div class="comment__user-inner">
+            <div class="comment__user-avatar">
+                B
+            </div>
+            <div class="comment__user-info">
+                Владлена
+                <div class="comment__raiting">
+                    Оценка: 
+                    <object class="baker-rating__star baker-rating__star_small" type="image/svg+xml" data='icons/star.svg' ></object>
+                    <span>5</span>
+                </div>
+            </div>
+        </div>
+        <div class="comment__data">1 ноябр. 2020 г.</div>
+    </div>
+    <div class="comment__text">
+        Мне всё понравилось:) Рекомендую всем попробовать торт с вишневой начинкой!
+        Он получился как с картинки, такой, как я и хотела! Буду заказывать еще.
+
+    </div>
+    <div class="comment__footer">
+        Вам помог этот отзыв?
+        <div class="comment__btns">
+            <button class="comment__btn-yes">да<span>4</span></button>
+            <button class="comment__btn-no">нет<span>0</span></button>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+<div class="about-baker__location about-baker__special-info-inner">
+    <div class="about-baker__location-inner">
+        <h4 class="h4">Местоположение</h4>
+        <object class="about-baker__more-info-icon" type="image/svg+xml" data='icons/more-info.svg'></object>
+    </div>
+    
+    <div data-spoiler class="about-baker__more-location">
+        <div class="about-baker__more-location-item">
+            <span class="text-value about-baker__value">Город:</span>
+            Санкт-Петербург
+        </div>
+        <div class="about-baker__more-location-item">
+            <span class="text-value about-baker__value">Район:</span>
+            Приморский
+        </div>
+        <div class="about-baker__more-location-item">
+            <span class="text-value about-baker__value">Метро:</span>
+            Беговая
+        </div>
+        <div class="about-baker__more-location-item">
+            <span class="text-value about-baker__value">Расстояние:</span>
+            4 км
+        </div>
+    </div>
+</div>

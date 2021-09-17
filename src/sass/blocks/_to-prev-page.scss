@@ -1,0 +1,19 @@
+.to-prev-page{
+    padding-top: 60px;
+    display: flex;
+
+    &__grey-wrapper{
+        padding-left: 12px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 6px;
+            background-image: url(../../icons/down-arrow.svg);
+            top: 39%;
+            left: -3px;
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -2,9 +2,6 @@
     font-weight: 300;
     border: 1px solid #E2E3F0;
     border-radius: 19px;
-    &__value{
-        font-weight: 400;
-    }
     &__content-inner{
         display: flex;
         justify-content: space-between;
@@ -48,10 +45,5 @@
         // background-position: -5px -10px;
         // background-size: 150%;
         
-    }
-    &__star{
-        width: 14px;
-        height: 14px;
-        margin: 0 4px 0 8px;
     }
 }

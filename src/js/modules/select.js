@@ -9,8 +9,13 @@ function custSelect (){
 
     const selectChoose = function() {
         let parent = this.closest('.select-block__inner');
-        let currentText = parent.querySelector('.select-block__current');
-        currentText.innerText = this.innerText;
+        let thisHeader = parent.querySelector('.select-block__header');
+        
+        if (!thisHeader.hasAttribute('data-cannot-change-header')){
+            let currentText = parent.querySelector('.select-item');
+            currentText.innerText = this.innerText;
+        }
+        
         parent.classList.remove('select-block__inner_active');
 
     };
@@ -20,7 +25,7 @@ function custSelect (){
             item.addEventListener('click', selectToggle);
         });
 
-        selectItems.forEach(item => {
+        selectItems.forEach((item, i) => {
             item.addEventListener('click', selectChoose);
         });
     };

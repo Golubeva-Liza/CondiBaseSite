@@ -4,7 +4,6 @@ function doubleRangeSlider(){
     window.onload = function(){
         slideOne();
         slideTwo();
-        console.log('Я Лиза-Сева');
     };
 
     let sliderOne = document.getElementById("range-slider-1");

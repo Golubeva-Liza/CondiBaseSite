@@ -1,0 +1,50 @@
+.topping-card{
+    width: 622px;
+    background: #FFFFFF;
+    border: 1px solid #E9EBFE;
+    box-sizing: border-box;
+    border-radius: 13px;
+    padding: 30px 50px 20px 50px;
+
+    &__top,
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__structure{
+        margin-top: 15px;
+        display: flex;
+    }
+    &__structure-text{
+        margin-left: 20px;
+        max-width: 300px;
+    }
+    &__value{
+        display: block;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__cake-photo{
+        width: 148px;
+        height: 148px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    &__cake-img{
+        width: 100%;
+    }
+
+    &__footer{
+        margin-top: 14px;
+    }
+    &__footer-item{
+        display: flex;
+    }
+    &__footer-text-item{
+        margin-right: 35px;
+    }
+}

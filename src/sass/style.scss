@@ -38,15 +38,21 @@ html, body {
     width: 793px;
 }
 .h1{
-    font-family: $second-font;
-    font-weight: 600;
+    @include title;
     font-size: 45px;
     line-height: 47px;
 }
 .h2 {
-    font-family: $second-font;
-    font-weight: 600;
+    @include title;
     font-size: 35px;
+}
+.h3 {
+    @include title;
+    font-size: 24px;
+}
+.h4 {
+    @include title;
+    font-size: 16px;
 }
 .underline {
     text-decoration: underline;
@@ -86,15 +92,37 @@ html, body {
         }
     }
 }
-.search-input{
-    width: 204px;
+.grey-wrapper{
     height: 30px;
-    background: #F7F7F7;
+    background: $blocks-color;
     border-radius: 7px;
     padding: 5px 12px;
     border: none;
     outline: none;
+    &:hover{
+        background: $blocks-color-hover;
+    }
 }
+.text-value{
+    font-weight: 400;
+}
+.text-value-thin{
+    font-weight: 300;
+}
+.big-hr{
+    width: 100%;
+    height: 1px;
+    background-color: #e9ebfe;
+    border: none;
+    margin: 50px 0;
+}
+.see-more{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 
 
 //more blocks
@@ -108,6 +136,13 @@ html, body {
 @import 'blocks/slick-slider';
 @import 'blocks/dowload-more';
 @import 'blocks/pagination';
+@import 'blocks/to-prev-page';
+@import 'blocks/topping-card';
+@import 'blocks/baker-rating';
+@import 'blocks/select-item';
+@import 'blocks/comment';
+@import 'blocks/spoiler';
+
 
 
 //header&footer
@@ -123,3 +158,6 @@ html, body {
 
 //other pages
 @import "blocks/result-search/result-search";
+@import 'blocks/baker-profile/baker-profile';
+@import 'blocks/baker-profile/toppings';
+@import 'blocks/baker-profile/baker-feedback';

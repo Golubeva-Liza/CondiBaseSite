@@ -1,0 +1,15 @@
+.select-item{
+    display: block;
+    padding-right: 15px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+    &::after{
+       @include small-down-arrow;
+       right: 0;
+    }
+    &:active{
+        background: #F7F7F7;
+
+    }
+}

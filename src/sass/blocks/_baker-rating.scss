@@ -1,0 +1,17 @@
+.baker-rating{
+    &__star{
+        width: 14px;
+        height: 14px;
+        margin: 0 4px 0 8px;
+        &_small{
+            width: 12px;
+            height: 11px;
+            margin: 0 0 0 3px;
+        }
+        &_big{
+            width: 21px;
+            height: 21px;
+            margin: 0;
+        }
+    }
+}

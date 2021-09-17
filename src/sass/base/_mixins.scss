@@ -28,3 +28,8 @@
 @mixin smooth{
   transition: all 0.3s;
 }
+
+@mixin title{
+  font-family: $second-font;
+  font-weight: 600;
+}
