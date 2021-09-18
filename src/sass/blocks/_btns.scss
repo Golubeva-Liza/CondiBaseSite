@@ -16,6 +16,12 @@
 
     cursor: pointer;
     @include smooth;
+    
+    &_small{
+        width: 114px;
+        height: 38px;
+        font-size: 13px;
+    }
 
     &_v2{
         width: 161px;

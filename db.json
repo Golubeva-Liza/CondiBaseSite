@@ -1,0 +1,179 @@
+{
+  "bakerCards": [
+    {
+      "avatar": "img/bakers/Ekaterina/avatar.jpg",
+      "name": "Екатерина",
+      "rating": 4.6,
+      "images": [
+        "img/bakers/Ekaterina/cake1.jpg",
+        "img/bakers/Ekaterina/cake2.jpg",
+        "img/bakers/Ekaterina/cake3.jpg",
+        "img/bakers/Ekaterina/cake4.jpg",
+        "img/bakers/Ekaterina/cake5.jpg",
+        "img/bakers/Ekaterina/cake6.jpg",
+        "img/bakers/Ekaterina/cake7.jpg",
+        "img/bakers/Ekaterina/cake8.jpg",
+        "img/bakers/Ekaterina/cake9.jpg",
+        "img/bakers/Ekaterina/cake10.jpg",
+        "img/bakers/Ekaterina/cake11.jpg"
+      ],
+      "level": "любитель",
+      "lenght": 4,
+      "price": 1800,
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/Maria/ava.jpg",
+      "name": "Мария",
+      "rating": 4.9,
+      "images": [
+        "img/bakers/Maria/cake1.jpg",
+        "img/bakers/Maria/cake2.jpg",
+        "img/bakers/Maria/cake3.jpg",
+        "img/bakers/Maria/cake4.jpg",
+        "img/bakers/Maria/cake5.jpg"
+      ],
+      "level": "профи",
+      "lenght": 3,
+      "price": 2300,
+      "profileLink": "#"
+    },
+    {
+      "avatar": "img/bakers/Evgenia/ava.jpg",
+      "name": "Евгения",
+      "rating": 4.9,
+      "images": [
+        "img/bakers/Evgenia/cake1.jpg",
+        "img/bakers/Evgenia/cake2.jpg",
+        "img/bakers/Evgenia/cake3.jpg",
+        "img/bakers/Evgenia/cake4.jpg",
+        "img/bakers/Evgenia/cake5.jpg",
+        "img/bakers/Evgenia/cake6.jpg",
+        "img/bakers/Evgenia/cake7.jpg"
+      ],
+      "level": "любитель",
+      "lenght": 4,
+      "price": 1700,
+      "profileLink": "#"
+    },
+    {
+      "avatar": "img/bakers/Olga/ava.jpg",
+      "name": "Ольга",
+      "rating": 4.8,
+      "images": [
+        "img/bakers/Olga/cake1.jpg",
+        "img/bakers/Olga/cake2.jpg",
+        "img/bakers/Olga/cake3.jpg",
+        "img/bakers/Olga/cake4.jpg",
+        "img/bakers/Olga/cake5.jpg",
+        "img/bakers/Olga/cake6.jpg",
+        "img/bakers/Olga/cake7.jpg"
+      ],
+      "level": "любитель",
+      "lenght": 5.2,
+      "price": 1500,
+      "profileLink": "#"
+    },
+    {
+      "avatar": "img/bakers/Polina/ava.jpg",
+      "name": "Полина",
+      "rating": 5,
+      "images": [
+        "img/bakers/Polina/cake1.jpg",
+        "img/bakers/Polina/cake2.jpg",
+        "img/bakers/Polina/cake3.jpg",
+        "img/bakers/Polina/cake4.jpg",
+        "img/bakers/Polina/cake5.jpg",
+        "img/bakers/Polina/cake6.jpg",
+        "img/bakers/Polina/cake7.jpg",
+        "img/bakers/Polina/cake8.jpg"
+      ],
+      "level": "профи",
+      "lenght": 23,
+      "price": 3500,
+      "profileLink": "#"
+    },
+    {
+      "avatar": "img/bakers/Irina/ava.jpg",
+      "name": "Ирина",
+      "rating": 4.7,
+      "images": [
+        "img/bakers/Irina/cake1.jpg",
+        "img/bakers/Irina/cake2.jpg",
+        "img/bakers/Irina/cake3.jpg",
+        "img/bakers/Irina/cake4.jpg",
+        "img/bakers/Irina/cake5.jpg",
+        "img/bakers/Irina/cake6.jpg",
+        "img/bakers/Irina/cake7.jpg",
+        "img/bakers/Irina/cake8.jpg",
+        "img/bakers/Irina/cake9.jpg"
+      ],
+      "level": "любитель",
+      "lenght": 16,
+      "price": 2300,
+      "profileLink": "#"
+    },
+    {
+      "avatar": "img/bakers/Elizaveta/ava.jpg",
+      "name": "Елизавета",
+      "rating": 4.5,
+      "images": [
+        "img/bakers/Elizaveta/cake1.jpg",
+        "img/bakers/Elizaveta/cake2.jpg",
+        "img/bakers/Elizaveta/cake3.jpg",
+        "img/bakers/Elizaveta/cake4.jpg",
+        "img/bakers/Elizaveta/cake5.jpg",
+        "img/bakers/Elizaveta/cake6.jpg",
+        "img/bakers/Elizaveta/cake7.jpg",
+        "img/bakers/Elizaveta/cake8.jpg"
+      ],
+      "level": "любитель",
+      "lenght": 9,
+      "price": 1600,
+      "profileLink": "#"
+    }
+  ],
+
+  "comments": [
+    {
+      "avatar": "В",
+      "name": "Владлена",
+      "rating": 5,
+      "data": "1 ноябр. 2020 г.",
+      "commentText": "Мне всё понравилось:) Рекомендую всем попробовать торт с вишневой начинкой! Он получился как с картинки, такой, как я и хотела! Буду заказывать еще.",
+      "yesCount": 4,
+      "noCount": 0
+    },
+    {
+      "avatar": "О",
+      "name": "Олег",
+      "rating": 4.6,
+      "data": "11 ноябр. 2020 г.",
+      "commentText": "Мне всё понравилось:) Рекомендую всем попробовать торт с вишневой начинкой! Он получился как с картинки, такой, как я и хотела! Буду заказывать еще.",
+      "yesCount": 3,
+      "noCount": 1
+    },
+    {
+      "avatar": "О",
+      "name": "Олег",
+      "rating": 4.6,
+      "data": "11 ноябр. 2020 г.",
+      "commentText": "Мне всё понравилось:) Рекомендую всем попробовать торт с вишневой начинкой! Он получился как с картинки, такой, как я и хотела! Буду заказывать еще.",
+      "yesCount": 3,
+      "noCount": 1
+    },
+    {
+      "avatar": "О",
+      "name": "Олег",
+      "rating": 4.6,
+      "data": "11 ноябр. 2020 г.",
+      "commentText": "Мне всё понравилось:) Рекомендую всем попробовать торт с вишневой начинкой! Он получился как с картинки, такой, как я и хотела! Буду заказывать еще.",
+      "yesCount": 3,
+      "noCount": 1
+    }
+  ],
+
+  "requests": [
+      
+  ]
+}

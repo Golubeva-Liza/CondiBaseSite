@@ -1,0 +1,122 @@
+.selected-product{
+    width: 328px;
+    box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+    border-radius: 13px;
+    padding: 30px;
+    font-weight: 300;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__top,
+    &__dowload-photo,
+    &__data{
+        margin-bottom: 14px;
+    }
+    &__hr{
+        width: 100%;
+        height: 1px;
+        border: 1px solid rgba(51, 51, 51, 0.3);
+        margin: 14px 0;
+    }
+    &__title{
+        font-weight: 400;    
+    }
+    &__reduce,
+    &__close{
+        width: 15px;
+        height: 15px;
+        pointer-events: none;
+    }
+    &__btns{
+        display: flex;
+        button{
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            &:first-child{
+                margin-right: 8px;
+            }
+        }
+    }
+    &__descr{
+        resize: none;
+        width: 100%;
+        height: 112px;
+        border: 1px solid rgba(51, 51, 51, 0.3);
+        border-radius: 4px;  
+        padding: 8px 12px;
+        margin-bottom: 14px;
+        outline: none;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+        &:hover,
+        &:active{
+            border: 1px solid rgba(51, 51, 51, 0.5);
+        }
+    }
+    &__upload-btn{
+        border: none;
+        padding: 0;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover .selected-product__title{
+            text-decoration: underline;
+        }
+    }
+    &__upload-icon{
+        margin-left: 10px;
+        pointer-events: none;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 13px;
+    }
+    &__weight-inner{
+        display: flex;
+    }
+    &__select-inner{
+        margin-left: 5px;
+    }
+    &__question-icon{
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+    }
+    &__price-per-one{
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+        margin-left: 33px;
+    }
+
+    &__total-price{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    &__price-inner{
+        display: flex;
+        align-items: center; 
+        margin-top: 7px;
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+    }
+
+    
+
+    
+}
