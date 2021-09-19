@@ -17,6 +17,10 @@
     cursor: pointer;
     @include smooth;
     
+    &:hover{
+        background: $main-color-hover;
+    }
+
     &_small{
         width: 114px;
         height: 38px;
@@ -43,6 +47,11 @@
         &_small{
             width: 102px;
             height: 37px;
+        }
+
+        &_active{
+            background: $additional-color;
+            color: #fff;
         }
     }
 }

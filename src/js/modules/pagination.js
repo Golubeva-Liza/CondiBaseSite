@@ -1,5 +1,5 @@
 function pagination(elementsParent, outputElements, numberElementsPerPage){
-    console.log(outputElements);
+    // console.log(outputElements);
     //с чем работать - массив данных
     //обертка(родитель), в который мы выводим массив данных
     //количество элементов, выводимых на одной странице пагинации

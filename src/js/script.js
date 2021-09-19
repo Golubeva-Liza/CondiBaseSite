@@ -8,8 +8,11 @@ import radio from './modules/radioInput';
 import pagination from './modules/pagination';
 import BakerCards from './modules/bakerCards';
 import Comments from './modules/comments';
+import ToppingCard from './modules/toppingСard';
 import spoiler from './modules/spoiler';
 import uploadFile from './modules/uploadFile';
+import chooseCake from './modules/chooseCake';
+
 // import {getResourse} from './services/services';
 
 
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         radio();
     }
 
-    
+
     if(window.location.pathname == "/profile.html"){
         $(document).ready(function(){
             $('.slider').slick({
@@ -67,6 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         custSelect();
 
+        fetch('http://localhost:3004/toppings')
+            .then(data => data.json())
+            .then(res => {                
+                res.forEach(({taste, rating, photo, cake, topping, coating, price, minWeight}) => {
+                    new ToppingCard(taste, rating, photo, cake, topping, coating, price, minWeight).writeHtml('toppingsWrapper');
+                });
+                chooseCake(res);
+            });
+
         const commentsItems = [];
         fetch('http://localhost:3004/comments')//придет массив с объектами карточек
             .then(data => data.json())
@@ -78,6 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         spoiler();
-        uploadFile();
+
     }
 });

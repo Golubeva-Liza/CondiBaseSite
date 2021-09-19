@@ -4,6 +4,7 @@
     border-radius: 13px;
     padding: 30px;
     font-weight: 300;
+    animation: opacity 0.5s;
     &__top{
         display: flex;
         justify-content: space-between;
@@ -67,6 +68,7 @@
         background-color: #fff;
         display: flex;
         align-items: center;
+        font-weight: 400;
         cursor: pointer;
         &:hover .selected-product__title{
             text-decoration: underline;
@@ -75,6 +77,51 @@
     &__upload-icon{
         margin-left: 10px;
         pointer-events: none;
+    }
+    &__upload-input{
+        display: none;
+    }
+    &__more-btn{
+        border: none;
+        padding: 0;
+        background-color: #fff;
+        cursor: pointer;
+        height: 24px;
+        transform: translateY(-4px);
+    }
+    &__more-icon{
+        pointer-events: none;
+        width: 24px;
+        height: 24px;
+    }
+    &__preview{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__preview-image{
+        margin: 0 10px 10px 0;
+        position: relative;
+        img{
+            width: 100%;
+            height: 60px;
+        }
+        &:hover .selected-product__preview-remove{
+            opacity: 1;
+        }
+    }
+    &__preview-remove{
+        opacity: 0;
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        transition: all .3s;
+        img{
+            height: 100%;
+        }
     }
 
     &__bottom{
@@ -116,7 +163,29 @@
         justify-content: space-between;
     }
 
-    
-
+    &__count{
+        display: flex;
+        height: 20px;
+        button{
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            margin-top: 5px;
+        }
+    }
+    &__count-number{
+        font-weight: 600;
+        margin: 0 10px;
+    }
+    &__count-r-arrow{
+        transform: rotate(180deg);
+    }
+    &__count-l-arrow,
+    &__count-r-arrow{
+        pointer-events: none;
+    }
     
 }
