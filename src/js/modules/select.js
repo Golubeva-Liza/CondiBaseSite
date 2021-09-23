@@ -1,7 +1,14 @@
-function custSelect (){
+import calcTotalPrice from './calcPrice';
+function custSelect (selector, parentOfSelectBlock = 0){
     //____________________castomize select________________________________________
-    const selectHeader = document.querySelectorAll('.select-block__header');
-    const selectItems = document.querySelectorAll('.select-block__item');
+    let parentSelector;
+    if (parentOfSelectBlock != 0){
+        parentSelector = parentOfSelectBlock.querySelector(selector);
+    } else {
+        parentSelector = document.querySelector(selector);
+    }
+    const selectHeader = parentSelector.querySelector('.select-block__header');
+    const selectItems = parentSelector.querySelectorAll('.select-block__item');
 
     const selectToggle = function() {
         this.parentElement.classList.toggle('select-block__inner_active');
@@ -18,18 +25,18 @@ function custSelect (){
         
         parent.classList.remove('select-block__inner_active');
 
+        if (parentSelector.closest('.selected-product')){
+            calcTotalPrice(parentSelector.closest('.selected-product'));
+        }
     };
 
-    const select = function (){
-        selectHeader.forEach(item => {
-            item.addEventListener('click', selectToggle);
-        });
 
-        selectItems.forEach((item, i) => {
-            item.addEventListener('click', selectChoose);
-        });
-    };
 
-    select();
+    selectHeader.addEventListener('click', selectToggle);
+
+    selectItems.forEach((item, i) => {
+        item.addEventListener('click', selectChoose);
+    });
+
 }
 export default custSelect;

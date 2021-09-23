@@ -12,6 +12,7 @@ import ToppingCard from './modules/toppingСard';
 import spoiler from './modules/spoiler';
 import uploadFile from './modules/uploadFile';
 import chooseCake from './modules/chooseCake';
+import hints from './modules/hints';
 
 // import {getResourse} from './services/services';
 
@@ -19,11 +20,12 @@ import chooseCake from './modules/chooseCake';
 
 document.addEventListener('DOMContentLoaded', () => {
     if((window.location.href == "http://localhost:3000/") || window.location.pathname == "/index.html"){
-        custSelect();
+        custSelect('.header__select');
     }
 
     if(window.location.pathname == "/result-search.html"){
-        custSelect();
+        custSelect('.header__select');
+        custSelect('.result-search__select-inner');
         doubleangeSlider();
 
         const bakerCardsInfo = [];
@@ -68,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 dots: true
             });
         });
-        custSelect();
+        custSelect('.header__select');
+        custSelect('.baker-feedback__select-inner');
 
         fetch('http://localhost:3004/toppings')
             .then(data => data.json())
@@ -90,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         spoiler();
+        hints();
 
     }
 });

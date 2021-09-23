@@ -1,0 +1,17 @@
+.hint{
+    display: none;
+    font-size: 13px;
+    width: 260px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+    border-radius: 13px;
+    font-weight: 300;
+    padding: 18px;
+    &-about-total span{
+        font-weight: 400;
+    }
+
+    &_active{
+        display: block;
+    }
+}

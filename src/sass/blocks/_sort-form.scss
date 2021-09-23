@@ -61,5 +61,8 @@
     &__search-input{
         @include sort-form-mb;
         width: 204px;
+        &:focus{
+            background: $blocks-color-hover;
+        }
     }
 }

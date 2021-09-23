@@ -9,5 +9,9 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        position: relative;
+    }
+    &__topping-choice{
+        position: relative;
     }
 }
