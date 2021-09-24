@@ -14,6 +14,7 @@ export default class ToppingCard {
         const toppingCardsParent = document.getElementById(toppingCardsSelector);
         const element = document.createElement('div');
         element.classList.add("topping-card", "toppings__cards");
+        element.setAttribute('data-topping', this.taste);
 
         element.innerHTML = `
             <div class="topping-card__top">

@@ -10,6 +10,7 @@ export default class SelectedProductCard {
         const productParent = document.getElementById(productSelector);
         const element = document.createElement('div');
         element.classList.add("selected-product");
+        element.setAttribute('data-selectedProduct', this.taste);
         element.style.top = `${offset}px`;
         element.style.zIndex = zIndex;
 
@@ -33,8 +34,8 @@ export default class SelectedProductCard {
                         <span id="toppingName">${this.taste}</span> 
                     </div>
                     <div class="selected-product__btns">
-                        <button><object class="selected-product__reduce" type="image/svg+xml" data='icons/reduce.svg'></object></button>
-                        <button><object class="selected-product__close" type="image/svg+xml" data='icons/close.svg' ></object></button>
+                        <button data-openProductCard ></button>
+                        <button data-closeProductCard><object class="selected-product__close" type="image/svg+xml" data='icons/close.svg' ></object></button>
                     </div>
                 </div>
                 <div class="selected-product__data">

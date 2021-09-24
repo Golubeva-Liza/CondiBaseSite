@@ -21,7 +21,6 @@
     }
     &__body{
         position: absolute;
-        width: 240px;
         background: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
         border-radius: 13px;
@@ -49,8 +48,9 @@
     &__item-header,
     &__item{
         line-height: 30px;
-        padding: 0 18px;
+        padding: 0 50px 0 18px;
         cursor: pointer;
+        white-space: nowrap;
         &:hover{
             background: #F7F7F7;
         }

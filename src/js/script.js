@@ -21,10 +21,12 @@ import hints from './modules/hints';
 document.addEventListener('DOMContentLoaded', () => {
     if((window.location.href == "http://localhost:3000/") || window.location.pathname == "/index.html"){
         custSelect('.header__select');
+        custSelect('.header__user-select');
     }
 
     if(window.location.pathname == "/result-search.html"){
         custSelect('.header__select');
+        custSelect('.header__user-select');
         custSelect('.result-search__select-inner');
         doubleangeSlider();
 
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         custSelect('.header__select');
         custSelect('.baker-feedback__select-inner');
+        custSelect('.header__user-select');
 
         fetch('http://localhost:3004/toppings')
             .then(data => data.json())

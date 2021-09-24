@@ -11,8 +11,9 @@ function calcTotalPrice(cardSelector, pricePerKilo = 0){
         pricePerKilogram = pricePerKilo;
     }
 
-    pricePerOne.innerHTML = weightNum * pricePerKilogram;
-    totalPrice.innerHTML = Math.round(amount * pricePerOne.textContent);
+    const pricePerOneCake = Math.round(weightNum * pricePerKilogram);
+    totalPrice.innerHTML = `${Math.round(amount * pricePerOneCake)} ₽`;
+    pricePerOne.innerHTML = `${pricePerOneCake} ₽`;
 
 }
 export default calcTotalPrice;
