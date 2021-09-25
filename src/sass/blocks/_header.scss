@@ -84,6 +84,9 @@
             }
         }
     }
+    &__search-item{
+        position: relative;
+    }
 
 
     &__user-select{
@@ -91,5 +94,11 @@
             right: 0;
             top: 50px;
         }
+    }
+
+    &__calendar{
+        top: 65px;
+        left: 0;
+        transform: translateX(-35%);
     }
 }

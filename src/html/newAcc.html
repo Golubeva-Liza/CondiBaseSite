@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>CondiBase</title>
+</head>
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        
+        <main class="main">
+            <div class="container">
+                <div class="main-container">
+
+                    <div class="calendar">
+                        <div class="calendar__month">
+                            <button class="calendar__prev"><object class="calendar__prev-icon" type="image/svg+xml" data="icons/list_left.svg"></object></button>
+                            <h4 class="h4 calendar__current-month"></h4>
+                            <button class="calendar__next"><object class="calendar__next-icon" type="image/svg+xml" data="icons/list_right.svg"></object></button>
+                        </div>
+                        <div class="calendar__dates-wrapper">
+                            <div class="calendar__weekdays">
+                                <div>пн</div>
+                                <div>вт</div>
+                                <div>ср</div>
+                                <div>чт</div>
+                                <div>пт</div>
+                                <div>сб</div>
+                                <div>вс</div>
+                            </div>
+                            <!-- здесь выводятся дни месяца -->
+                            <div class="calendar__days">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </div>
+    @@include('./components/scripts.html')
+</body>
+</html>

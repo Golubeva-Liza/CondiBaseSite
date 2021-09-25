@@ -12,7 +12,7 @@
     <title>CondiBase</title>
 </head>
 <body>
-    <div class="wrapper" >
+    <div class="wrapper">
         <header class="header">
     <div class="container">
         <div class="header__wrapper">
@@ -105,175 +105,34 @@
         </div>
     </div>
 </header>
-
+        
         <main class="main">
             <div class="container">
-                <section class="result-search">
-                    <div class="sort-form">
-                        <div class="sort-form__title">Радиус поиска, км</div>
-                        <div class="sort-form__radius">
-                            <div class="sort-form__radius-item">1</div>
-                            <div class="sort-form__radius-item">5</div>
-                            <div class="sort-form__radius-item sort-form__radius-item_selected">10</div>
-                            <div class="sort-form__radius-item">25</div>
-                            <div class="sort-form__radius-item">50</div>
-                            <div class="sort-form__radius-item">100</div>
-                        </div>
-                        <div class="sort-form__title sort-form__title_big-mb">
-                            Метро
-                            <a href="#">
-                                <object class="sort-form__plus" type="image/svg+xml" data="icons/plus.svg" id='object'></object>
-                            </a>
-                        </div>
-                        <div class="sort-form__title sort-form__title_big-mb">
-                            Район
-                            <a href="#">
-                                <object class="sort-form__plus" type="image/svg+xml" data="icons/plus.svg" id='object'></object>
-                            </a>
-                        </div>
-                        <div class="sort-form__title">Уровень мастерства</div>
-                        <div class="check-form sort-form__check-level">
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Начинающий
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Любитель
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Профи
-                            </label>
-                        </div>
+                <div class="main-container">
 
-                        <div class="sort-form__title">Средняя стоимость торта, 1кг</div>
-                        <div class="double-range-slider sort-form__double-range-slider">
-                            <div class="double-range-slider__track"></div>
-                            <input class="double-range-slider__input" type="range" min="100" max="10000" value="800" id="range-slider-1">
-                            <input class="double-range-slider__input" type="range" min="100" max="10000" value="8000" id="range-slider-2">
+                    <div class="calendar">
+                        <div class="calendar__month">
+                            <button class="calendar__prev"><object class="calendar__prev-icon" type="image/svg+xml" data="icons/list_left.svg"></object></button>
+                            <h4 class="h4 calendar__current-month"></h4>
+                            <button class="calendar__next"><object class="calendar__next-icon" type="image/svg+xml" data="icons/list_right.svg"></object></button>
                         </div>
-                        <div class="double-range-slider__values">
-                            <div class="value-box double-range-slider__min-value">
-                                <span class="value-box__span">от</span>
-                                <input class="value-box__input" type="number" name="price" min="100" max="10000" value="1000" id="range-1">
-                                <span class="value-box__span">₽</span>
+                        <div class="calendar__dates-wrapper">
+                            <div class="calendar__weekdays">
+                                <div>пн</div>
+                                <div>вт</div>
+                                <div>ср</div>
+                                <div>чт</div>
+                                <div>пт</div>
+                                <div>сб</div>
+                                <div>вс</div>
                             </div>
-                            <div class="value-box double-range-slider__max-value">
-                                <span class="value-box__span">до</span>
-                                <input class="value-box__input" type="number" name="price" min="100" max="10000" value="8000" id="range-2">
-                                <span class="value-box__span">₽</span>
+                            <!-- здесь выводятся дни месяца -->
+                            <div class="calendar__days">
                             </div>
-                        </div>
-
-                        <div class="sort-form__title">Рейтинг</div>
-                        <div class="check-form sort-form__check-rating">
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Не ниже 4,5 ☆
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Не ниже 4,0 ☆
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Не ниже 3,5 ☆
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
-                                <span data-box="radio" class="check-form__box"></span>
-                                Не ниже 3,0 ☆
-                            </label>
-                        </div>
-                        
-                        <div class="sort-form__title">Особенности торта</div>
-                        <input class="grey-wrapper sort-form__search-input" type="text" placeholder="Поиск по #тегу...">
-                        <div class="check-form sort-form__check-features">
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
-                                <span class="check-form__box"></span>
-                                Минимализм
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
-                                <span class="check-form__box"></span>
-                                Эксклюзивный
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
-                                <span class="check-form__box"></span>
-                                Торт необычной формы
-                            </label>
-                            <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
-                                <span class="check-form__box"></span>
-                                Многоярусный торт
-                            </label>
                         </div>
                     </div>
-
                     
-                    <div class="result-search__answer">
-                        <div class="container-column-8">
-
-                            <div class="result-search__top-inner">
-                                <div class="result-search__how-many-find">
-                                    Найдено <span>23 кондитера</span> рядом с вами.
-                                </div>
-                                <div class="select-block result-search__select-inner">
-                                    <!-- <select name="" id="" class="select-block__select">
-                                        <option value="recom" class="select__option">Рекомендованные</option>
-                                        <option value="chip" class="select__option">Сначала дешевле</option>
-                                    </select> -->
-                                    <!-- select-block__inner_active -->
-                                    <div class="select-block__inner">
-                                        <div class="select-block__header">
-                                            <span class="select-item">Рекомендованные</span>
-                                        </div>
-                                        <div class="select-block__body">
-                                            <div class="select-block__item">Рекомендованные</div>
-                                            <div class="select-block__item">Сначала дешевле</div>
-                                            <div class="select-block__item">Сначала дороже</div>
-                                            <div class="select-block__item">По убыванию рейтинга</div>
-                                            <div class="select-block__item">Сначала ближе ко мне</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- динамическое формирование карточек кондитера -->
-                            <div class="result-search__cards-inner" id='cardsWrapper'>
-                                
-                            </div>
-                            <div class="list" id="list"></div>
-                            <div class="see-more result-search__bottom-inner">
-                                <div class="download-more result-search__download-more">
-                                    <div class="download-more__circle"></div>
-                                    <div class="download-more__circle"></div>
-                                    <div class="download-more__circle"></div>
-                                    <button class="download-more__text">Загрузить больше</button>
-                                </div>
-                                <div class="pagination result-search__pagination">
-                                    <a href="#" class="pagination__back" id="paginationBack">
-                                        <div class="pagination__back-content">назад</div>
-                                    </a>
-                                    <div class="pagenumbers" id="pagination"></div>
-                                    <a href="#" class="pagination__forward" id="paginationForward">
-                                        <div class="pagination__forward-content">вперед</div>
-                                    </a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
         </main>
 
@@ -382,7 +241,6 @@
     </div>
 </footer>
     </div>
-
     <!-- for slick slider -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/slick.min.js"></script>

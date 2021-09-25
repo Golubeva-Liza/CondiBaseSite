@@ -1,0 +1,93 @@
+.calendar{
+    position: absolute;
+    z-index: 99;
+    width: 328px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+    border-radius: 13px;
+    padding: 20px 18px;
+    &__month{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    &__prev,
+    &__next{
+        background-color: #FFFFFF;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &-icon{
+            pointer-events: none;
+        }
+        &-disabled{
+            opacity: 0.5;
+        }
+    }
+    &__current-month{
+        text-transform: lowercase;
+    }
+    &__dates-wrapper{
+        width: 228px;
+        margin: 0 auto;
+    }
+    &__weekdays{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__weekdays div{
+        width: 24px;
+        height: 18px;
+        color: rgba(51, 51, 51, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    &__days{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__days-line{
+
+    }
+    &__days div{
+        width: 24px;
+        height: 24px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        transition: all .3s;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        &:not(.calendar__prev-date):not(.calendar__next-date):not(.calendar__past-day):hover{
+            background-color: $main-color-hover;
+            cursor: pointer;
+            color: #fff;
+            // outline: 1px solid $main-color-hover;
+        }
+        &:nth-child(7n+7){
+            // background-color: aqua;
+            margin-right: 0;
+        }
+    }
+    &__prev-date,
+    &__next-date{
+        opacity: 0.4;
+        pointer-events: none;
+    }
+    &__current-day{
+        background-color: $main-color;
+        color: #fff;
+    }
+    &__past-day{
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

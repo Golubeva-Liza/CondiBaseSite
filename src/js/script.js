@@ -13,6 +13,7 @@ import spoiler from './modules/spoiler';
 import uploadFile from './modules/uploadFile';
 import chooseCake from './modules/chooseCake';
 import hints from './modules/hints';
+import calendar from './modules/calendar';
 
 // import {getResourse} from './services/services';
 
@@ -98,5 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         spoiler();
         hints();
 
+    }
+
+
+    if(window.location.pathname == "/newAcc.html"){
+        calendar('.calendar');
     }
 });
