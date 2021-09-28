@@ -22,8 +22,29 @@
     }
     &__top,
     &__dowload-photo,
-    &__data{
+    &__date{
         margin-bottom: 14px;
+    }
+    &__date{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__date-inner{
+        min-width: 142px;
+        margin-left: 7px;
+        border: 1px solid rgba(51, 51, 51, 0.3);
+        border-radius: 4px;
+        padding: 5px 25px 5px 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    &__date-value{
+        font-weight: 300;
+        &::after{
+            @include small-down-arrow;
+            right: 10px;
+        }
     }
     &__hr{
         width: 100%;
@@ -213,5 +234,17 @@
     &__hint{
         margin-top: 14px;
     }
-    
+    &__calendar-wrapper{
+        z-index: 99;
+        position: absolute;
+        top: 40px;
+        left: -30px;
+        .calendar{
+            padding: 30px 18px 46px 18px;
+            &__month{
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
 }

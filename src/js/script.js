@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 variableWidth: true,
                 dots: true
             });
+            $('.baker-profile__slider').css("display", "block");//сделано, чтоб не было видно кривого контента до загрузки функции slick-slider
+            //может имеет смысл не показывать содержимое сайта пока все не загрузится
         });
         custSelect('.header__select');
         custSelect('.baker-feedback__select-inner');
@@ -103,6 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if(window.location.pathname == "/newAcc.html"){
-        calendar('.calendar');
+        
     }
 });

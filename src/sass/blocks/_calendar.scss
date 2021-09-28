@@ -1,11 +1,14 @@
 .calendar{
-    position: absolute;
-    z-index: 99;
+    display: none;
+    animation: appearance 0.5s;
     width: 328px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+    box-shadow: 0px 7px 15px rgba(98, 102, 150, 0.2);
     border-radius: 13px;
-    padding: 20px 18px;
+    padding: 20px 18px 20px 18px;
+    &_opened{
+        display: block;
+    }
     &__month{
         display: flex;
         justify-content: space-between;
@@ -31,10 +34,12 @@
     &__dates-wrapper{
         width: 228px;
         margin: 0 auto;
+        position: relative;
     }
     &__weekdays{
         display: flex;
         justify-content: space-between;
+        font-weight: 600;
     }
     &__weekdays div{
         width: 24px;
@@ -53,8 +58,17 @@
             margin-bottom: 0;
         }
     }
-    &__days-line{
-
+    &__hint{
+        opacity: 0;
+        position: absolute;
+        bottom: 18px;
+        left: 0;
+        font-size: 12px;
+        padding: 0 18px;
+        width: 100%;
+        text-align: center;
+        color: $main-color;
+        transition: all 0.5s;
     }
     &__days div{
         width: 24px;
@@ -66,7 +80,7 @@
         transition: all .3s;
         margin-right: 10px;
         margin-bottom: 5px;
-        &:not(.calendar__prev-date):not(.calendar__next-date):not(.calendar__past-day):hover{
+        &:not(.calendar__prev-date):not(.calendar__next-date):not(.calendar__past-day):not(.calendar__current-day):hover{
             background-color: $main-color-hover;
             cursor: pointer;
             color: #fff;
@@ -83,11 +97,18 @@
         pointer-events: none;
     }
     &__current-day{
-        background-color: $main-color;
-        color: #fff;
+        background-color: #eeeeee;
+        cursor: pointer;
+        // outline: 1px solid $main-color-hover;
+        // color: #fff;
     }
     &__past-day{
         opacity: 0.4;
         pointer-events: none;
+    }
+
+    &__selected-day{
+        background-color: $main-color;
+        color: #fff;
     }
 }

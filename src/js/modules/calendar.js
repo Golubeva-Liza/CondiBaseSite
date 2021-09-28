@@ -1,5 +1,5 @@
-function calendar(selector) {
-    const calendarParent = document.querySelector(selector);
+function calendar(parent, selector) {
+    const calendarParent = parent.querySelector(selector);
 
     const date = new Date();
     const months = [
@@ -43,7 +43,9 @@ function calendar(selector) {
         const nextDays = 7 - lastDayIndex;
 
         calendarParent.querySelector('.calendar__month h4').innerHTML = `${months[date.getMonth()]} ${date.getFullYear()} г.`;
-        
+        monthDays.setAttribute('data-month', date.getMonth());
+        monthDays.setAttribute('data-year', date.getFullYear());
+
         let days = "";
 
 
@@ -54,7 +56,7 @@ function calendar(selector) {
 
         for(let i = 1; i <= lastDay; i++){
             date.setDate(i);
-            if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()){
+            if ((i === new Date().getDate() && date.getMonth() === new Date().getMonth()) || (i === new Date().getDate() + 1 && date.getMonth() === new Date().getMonth())){
                 days += `<div class="calendar__current-day">${i}</div>`;
             } else if (date.getTime() < new Date().getTime()) {
                 days += `<div class="calendar__past-day">${i}</div>`;
@@ -72,6 +74,19 @@ function calendar(selector) {
             }
         }
         monthDays.innerHTML = days;
+
+        // если в календаре есть подсказка про мин. время выполнения заказа
+        if (calendarParent.querySelector('.calendar__hint')){
+            const disabledDays = calendarParent.querySelectorAll('.calendar__current-day');
+            disabledDays.forEach((day) => {
+                day.addEventListener('mouseover', () => {
+                    calendarParent.querySelector('.calendar__hint').style.opacity = 1;
+                });
+                day.addEventListener('mouseout', () => {
+                    calendarParent.querySelector('.calendar__hint').style.opacity = 0;
+                });
+            });
+        }
     };
     
 

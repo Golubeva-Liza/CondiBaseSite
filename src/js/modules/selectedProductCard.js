@@ -38,8 +38,34 @@ export default class SelectedProductCard {
                         <button data-closeProductCard><object class="selected-product__close" type="image/svg+xml" data='icons/close.svg' ></object></button>
                     </div>
                 </div>
-                <div class="selected-product__data">
+                <div class="selected-product__date">
                     <span class="selected-product__title">Дата:</span>
+                    <div data-change-date class="selected-product__date-inner">
+                        <span class="selected-product__date-value">Выберите дату</span>
+                    </div>
+                    <div class="selected-product__calendar-wrapper">
+                        <div class="calendar">
+                            <div class="calendar__month">
+                                <button class="calendar__prev"><object class="calendar__prev-icon" type="image/svg+xml" data="icons/list_left.svg"></object></button>
+                                <h4 class="h4 calendar__current-month"></h4>
+                                <button class="calendar__next"><object class="calendar__next-icon" type="image/svg+xml" data="icons/list_right.svg"></object></button>
+                            </div>
+                            <div class="calendar__dates-wrapper">
+                                <div class="calendar__weekdays">
+                                    <div>пн</div>
+                                    <div>вт</div>
+                                    <div>ср</div>
+                                    <div>чт</div>
+                                    <div>пт</div>
+                                    <div>сб</div>
+                                    <div>вс</div>
+                                </div>
+                                <div class="calendar__days">
+                                </div>
+                            </div>
+                            <span class="calendar__hint">Минимальное время выполнения заказа - 2 дня</span>
+                        </div>
+                    </div>
                 </div>
                 <textarea class="selected-product__descr" name="cake-description" placeholder="Опишите желаемый декор торта..."></textarea>
                 <div class="selected-product__upload-photo">

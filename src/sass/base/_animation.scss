@@ -12,3 +12,15 @@
         transform: translateY(0);
     }
 }
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    15%{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

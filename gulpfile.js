@@ -6,9 +6,6 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const webpack = require('webpack-stream');
 const fileinclude = require('gulp-file-include');
-// const jsonServer = require("gulp-json-srv");
-// const mamp = require('gulp-mamp');
-
 
 //webPack
 let webConfig = {
@@ -27,11 +24,6 @@ let webConfig = {
     }
 };
 
-
-gulp.task("startDb", function(){
-    return gulp.src("db.json")
-        .pipe(server.pipe());
-});
 
 gulp.task('fileinclude', function() {
     gulp.src(['src/html/*.html', '!src/html/components'])
@@ -82,7 +74,6 @@ gulp.task('watch', function(){
     gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
     gulp.watch(['src/js/**/*.js', '!src/js/bundle.js']).on("change", scripts);
     gulp.watch(['src/html/**/*.html']).on("change", gulp.parallel("fileinclude"));
-    // gulp.watch("db.json", gulp.parallel("startDb"));
 });
 
 gulp.task('default', gulp.parallel('watch', 'fileinclude', 'browser-sync', 'styles', 'scripts'));

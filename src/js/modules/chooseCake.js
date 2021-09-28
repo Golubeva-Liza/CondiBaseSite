@@ -3,6 +3,7 @@ import uploadFile from './uploadFile';
 import custSelect from './select';
 import calcTotalPrice from './calcPrice';
 import changeAmount from './changeAmount';
+import changeDate from './changeDate';
 
 function chooseCake(data){
     const btns = document.querySelectorAll('.topping-card button');
@@ -56,10 +57,12 @@ function chooseCake(data){
                 new SelectedProductCard(data[id].taste, data[id].minWeight, data[id].weights, data[id].price).writeHtml('selectedProductWrapper', offset, zIndex);
 
                 const newCard = document.querySelector('#selectedProductWrapper').lastChild;
+
                 //применяем функции к карточке
                 custSelect('.selected-product__select-inner', newCard);
                 changeAmount(newCard);
                 calcTotalPrice(newCard, data[id].price);
+                changeDate(newCard);
 
 
                 offset+=50;//прибавляем отступ для вывода следующей карточки
@@ -98,6 +101,7 @@ function chooseCake(data){
             document.querySelector('#toppingsWrapper').querySelectorAll('[data-topping]').forEach((card) => {
                 if (card.getAttribute('data-topping') === e.target.closest('.selected-product').getAttribute('data-selectedproduct')){
                     card.querySelector('.topping-card__footer button').classList.remove('button_v2_active');
+                    card.querySelector('.topping-card__footer button').textContent = "Выбрать";
                 }
             });
 
