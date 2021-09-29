@@ -136,12 +136,7 @@
                                 <div class="result-search__how-many-find">
                                     Найдено <span>23 кондитера</span> рядом с вами.
                                 </div>
-                                <div class="select-block result-search__select-inner">
-                                    <!-- <select name="" id="" class="select-block__select">
-                                        <option value="recom" class="select__option">Рекомендованные</option>
-                                        <option value="chip" class="select__option">Сначала дешевле</option>
-                                    </select> -->
-                                    <!-- select-block__inner_active -->
+                                <!-- <div class="select-block result-search__select-inner">
                                     <div class="select-block__inner">
                                         <div class="select-block__header">
                                             <span class="select-item">Рекомендованные</span>
@@ -154,6 +149,18 @@
                                             <div class="select-block__item">Сначала ближе ко мне</div>
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="new-select result-search__select-inner">
+                                    <button  class="new-select__btn">Рекомендованные</button>
+                                    <ul class="new-select__list">
+                                        <li class="new-select__list-item" data-value="recommended">Рекомендованные</li>
+                                        <li class="new-select__list-item" data-value="cheap">Сначала дешевле</li>
+                                        <li class="new-select__list-item" data-value="expensive">Сначала дороже</li>
+                                        <li class="new-select__list-item" data-value="rating">По убыванию рейтинга</li>
+                                        <li class="new-select__list-item" data-value="near">Сначала ближе ко мне</li>
+                                    </ul>
+                                    <!-- для отправки формы в которой находится select, для тех. нужд -->
+                                    <input class="new-select__input-hidden" type="text" name="select-category" value="">
                                 </div>
                             </div>
 

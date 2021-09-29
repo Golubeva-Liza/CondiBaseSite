@@ -1,8 +1,5 @@
 //____________________шаблонизация карточки кондитера_______________________________________
 export default class BakerCards {
-    //alt - что подставить вместо картинки, если не загрузилась
-    //parent - родительский div (селектор), в который мы будем вставлять карточку
-    //rest параметр не содержит default значение
     constructor (avatar, name, rating, images, level, lenght, price, profileLink){
         this.avatar = avatar;
         this.name = name;

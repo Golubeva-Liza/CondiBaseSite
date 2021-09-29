@@ -1,6 +1,6 @@
 import SelectedProductCard from './selectedProductCard';
 import uploadFile from './uploadFile';
-import custSelect from './select';
+import newSelect from './newSelect';
 import calcTotalPrice from './calcPrice';
 import changeAmount from './changeAmount';
 import changeDate from './changeDate';
@@ -30,6 +30,7 @@ function chooseCake(data){
                         document.querySelectorAll('.selected-product').forEach((card, i) => {
                             if (i + 1 === document.querySelectorAll('.selected-product').length){//у последнего элемента убираем класс "пассивности"
                                 card.classList.remove('selected-product_disabled');
+                                card.querySelector('.selected-product__preview').style.display = "flex";
                                 card.querySelector('[data-openproductcard]').innerHTML = '';
                             }
                             const numberOfTop = card.style.top.match(/\d+/)[0];
@@ -48,6 +49,7 @@ function chooseCake(data){
                 if (document.querySelectorAll('.selected-product')){//если есть уже карточки
                     document.querySelectorAll('.selected-product').forEach(productBlock => {
                         productBlock.classList.add('selected-product_disabled');
+                        productBlock.querySelector('.selected-product__preview').style.display = "none";
                         productBlock.querySelector('[data-openproductcard]').innerHTML = `
                             <object class="selected-product__reduce" type="image/svg+xml" data='icons/openProduct.svg'></object>
                         `;
@@ -59,7 +61,7 @@ function chooseCake(data){
                 const newCard = document.querySelector('#selectedProductWrapper').lastChild;
 
                 //применяем функции к карточке
-                custSelect('.selected-product__select-inner', newCard);
+                newSelect('.selected-product__select-inner', newCard);
                 changeAmount(newCard);
                 calcTotalPrice(newCard, data[id].price);
                 changeDate(newCard);
@@ -112,6 +114,7 @@ function chooseCake(data){
             document.querySelectorAll('.selected-product').forEach((card, i) => {
                 if (i + 1 === document.querySelectorAll('.selected-product').length){//у последнего элемента убираем класс "пассивности"
                     card.classList.remove('selected-product_disabled');
+                    card.querySelector('.selected-product__preview').style.display = "flex";
                 }
                 const numberOfTop = card.style.top.match(/\d+/)[0];
                 // console.log(numberOfTop);
@@ -135,6 +138,7 @@ function chooseCake(data){
             lastCard.style.top = `${offset - 50}px`;
             lastCard.style.zIndex = zIndex - 1;
             lastCard.classList.remove('selected-product_disabled');
+            lastCard.querySelector('.selected-product__preview').style.display = "flex";
             lastCard.querySelector('[data-openproductcard]').innerHTML = '';
 
             document.querySelectorAll('.selected-product').forEach((card, i) => {
@@ -145,12 +149,14 @@ function chooseCake(data){
                 if (card.style.top === '0px'){//у первого элемента ничего не делаем
                     console.log('первый элемент');
                     card.classList.add('selected-product_disabled');
+                    card.querySelector('.selected-product__preview').style.display = "none";
                     card.querySelector('[data-openproductcard]').innerHTML = `
                         <object class="selected-product__reduce" type="image/svg+xml" data='icons/openProduct.svg'></object>
                     `;
                     return;
                 }
                 card.classList.add('selected-product_disabled');
+                card.querySelector('.selected-product__preview').style.display = "none";
                 card.querySelector('[data-openproductcard]').innerHTML = `
                     <object class="selected-product__reduce" type="image/svg+xml" data='icons/openProduct.svg'></object>
                 `;
@@ -158,27 +164,6 @@ function chooseCake(data){
                 card.style.top = `${numberOfTop - 50}px`;
                 card.style.zIndex = card.style.zIndex - 1;
             });
-
-
-            // //убрали класс активности с конкретной кнопки "выбрать"
-            // document.querySelector('#toppingsWrapper').querySelectorAll('[data-topping]').forEach((card) => {
-            //     if (card.getAttribute('data-topping') === e.target.closest('.selected-product').getAttribute('data-selectedproduct')){
-            //         card.querySelector('.topping-card__footer button').classList.remove('button_v2_active');
-            //     }
-            // });
-
-            // //для оставшихся карточек
-            // document.querySelectorAll('.selected-product').forEach((card, i) => {
-            //     if (i + 1 === document.querySelectorAll('.selected-product').length){//у последнего элемента убираем класс "пассивности"
-            //         card.classList.remove('selected-product_disabled');
-            //     }
-            //     const numberOfTop = card.style.top.match(/\d+/)[0];
-            //     // console.log(numberOfTop);
-            //     if ((numberOfTop != 0) && (indexOfDeletedCard + 1 != allCards.length)){//если карточка не первая или если удаленный элемент не был последним
-            //         card.style.top = `${numberOfTop - 50}px`;
-            //         card.style.zIndex = zIndex - 1;
-            //     }
-            // });
         }
     });
     

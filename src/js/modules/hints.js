@@ -45,7 +45,7 @@ function hints() {
             secondHint.innerHTML = ` 
                 Вы выбрали:
                 - <span>${productCard.querySelector('.selected-product__count span').textContent}</span> торта с начинкой
-                <span>${productCard.querySelector('#toppingName').textContent}</span> весом по <span>${productCard.querySelector('.select-block__header span').textContent}</span>
+                <span>${productCard.querySelector('#toppingName').textContent}</span> весом по <span>${productCard.querySelector('.new-select__btn').textContent}</span>
                 с ценой бисквита <span>${productCard.querySelector('.selected-product__price-per-one span').textContent}/кг</span> к <span>14 ноября 2020г.</span>
             `;
             // исправить тут дату потом

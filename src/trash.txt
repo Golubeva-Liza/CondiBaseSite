@@ -364,3 +364,41 @@
         </button>
     </div>
 </div>
+
+
+        СТАРЫЕ СЕЛЕКТ БЛОКИ
+<!-- <div class="select-block header__user-select">
+    <div class="select-block__inner ">
+        <div data-cannot-change-header class="select-block__header">
+            <div class="header__account">
+                <a class="header__gamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="header__user">
+                    <img class="header__user-icon" src="icons/profile.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="select-block__body">
+            <a href='#'><div class="select-block__item">Регистрация/вход</div></a>
+            <a href='#'><div class="select-block__item">Центр помощи</div></a>
+            <a href='#'><div class="select-block__item">Доверие и безопасность</div></a>
+        </div>
+    </div>
+</div> -->
+
+<div class="select-block header__select">
+    <div class="select-block__inner ">
+        <div data-cannot-change-header class="select-block__header">
+            <span class="select-item">О сервисе</span>
+        </div>
+        <div  class="select-block__body">
+            <a href='#'><div class="select-block__item">Гарантия</div></a>
+            <a href='#'><div class="select-block__item">Работа</div></a>
+            <a href='#'><div class="select-block__item">Отзывы</div></a>
+        </div>
+    </div>
+</div>

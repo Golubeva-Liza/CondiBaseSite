@@ -14,11 +14,12 @@ export default class SelectedProductCard {
         element.style.top = `${offset}px`;
         element.style.zIndex = zIndex;
 
-        const selectBlock = document.createElement('div');
-        selectBlock.classList.add("select-block__body", "select-block__body_mini");
+        const selectBlock = document.createElement('ul');
+        selectBlock.classList.add("new-select__list");
         this.weights.forEach(weight => {
-            const selectBlockItem = document.createElement('div');
-            selectBlockItem.classList.add("select-block__item");
+            const selectBlockItem = document.createElement('li');
+            selectBlockItem.classList.add("new-select__list-item");
+            selectBlockItem.setAttribute("data-value", `${weight}`);
             selectBlockItem.textContent = `${weight} кг`;
             selectBlock.append(selectBlockItem);
         });
@@ -75,13 +76,10 @@ export default class SelectedProductCard {
                     <div class="selected-product__weight">
                         <div class="selected-product__weight-inner">
                             <span class="selected-product__title">Вес:</span>
-                            <div class="select-block selected-product__select-inner">
-                                <div class="select-block__inner">
-                                    <div class="select-block__header">
-                                        <span class="select-item">${this.minWeight} кг</span>
-                                    </div>
-                                
-                                </div>
+                            <div class="new-select selected-product__select-inner">
+                                <button class="new-select__btn">${this.minWeight} кг</button>
+
+                                <input class="new-select__input-hidden" type="text" name="select-category" value="">
                             </div>
                         </div>
                         <div class="selected-product__price-per-one">
@@ -123,7 +121,7 @@ export default class SelectedProductCard {
         `;
 
         productParent.append(element);
-        element.querySelector('.select-block__header').insertAdjacentElement('afterend', selectBlock);
+        element.querySelector('.new-select__btn').insertAdjacentElement('afterend', selectBlock);
         
     }
 }

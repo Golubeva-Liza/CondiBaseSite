@@ -53,6 +53,7 @@ html, body {
 .h4 {
     @include title;
     font-size: 16px;
+    line-height: 145%;
 }
 .underline {
     text-decoration: underline;
@@ -132,6 +133,7 @@ html, body {
 @import 'blocks/check-form';
 @import 'blocks/double-range-slider';
 @import 'blocks/select';
+@import 'blocks/new-select';
 @import 'blocks/baker-card';
 @import 'blocks/slick-slider';
 @import 'blocks/dowload-more';
@@ -164,3 +166,4 @@ html, body {
 @import 'blocks/baker-profile/baker-profile';
 @import 'blocks/baker-profile/toppings';
 @import 'blocks/baker-profile/baker-feedback';
+@import 'blocks/new-acc/create-profile';

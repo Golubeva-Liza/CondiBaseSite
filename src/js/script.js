@@ -1,8 +1,7 @@
-// "use strict";
 //npx json-server db.json
 //npx json-server --watch db.json --port 3004
 
-import custSelect from './modules/select';
+import newSelect from './modules/newSelect';
 import doubleangeSlider from './modules/doubleRangeSlider';
 import radio from './modules/radioInput';
 import pagination from './modules/pagination';
@@ -15,20 +14,18 @@ import chooseCake from './modules/chooseCake';
 import hints from './modules/hints';
 import calendar from './modules/calendar';
 
-// import {getResourse} from './services/services';
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
     if((window.location.href == "http://localhost:3000/") || window.location.pathname == "/index.html"){
-        custSelect('.header__select');
-        custSelect('.header__user-select');
+        newSelect('.header__select');
+        newSelect('.header__user-select');
     }
 
     if(window.location.pathname == "/result-search.html"){
-        custSelect('.header__select');
-        custSelect('.header__user-select');
-        custSelect('.result-search__select-inner');
+        newSelect('.header__select');
+        newSelect('.header__user-select');
+        newSelect('.result-search__select-inner');
         doubleangeSlider();
 
         const bakerCardsInfo = [];
@@ -38,11 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 //сколько будет карточек на сервере - столько раз их создаст
                 
                 res.forEach(({avatar, name, rating, images, level, lenght, price, profileLink}) => {
-                    //разбили объект в свойства
-                    // new BakerCards(obj.img, obj.altimg, obj.title ).writeHtml();
-                    //не оч хорошо, когда мы перебираем свойства. используем деструктуризацию объетка
-                    //вытаскиваем отдельные свойства в отдельную переменную
-
                     bakerCardsInfo.push(new BakerCards(avatar, name, rating, images, level, lenght, price, profileLink));
                 });
                 $(document).ready(function(){
@@ -50,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         arrows: true,
                         slidesToShow: 3,
                         speed: 500,
-                        //прокрутка слайдов на пк
                         draggable: false,
                         centerMode: true,
                         variableWidth: true,
@@ -75,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.baker-profile__slider').css("display", "block");//сделано, чтоб не было видно кривого контента до загрузки функции slick-slider
             //может имеет смысл не показывать содержимое сайта пока все не загрузится
         });
-        custSelect('.header__select');
-        custSelect('.baker-feedback__select-inner');
-        custSelect('.header__user-select');
+        newSelect('.header__select');
+        newSelect('.header__user-select');
+        newSelect('.baker-feedback__select-inner');
 
         fetch('http://localhost:3004/toppings')
             .then(data => data.json())
@@ -105,6 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if(window.location.pathname == "/newAcc.html"){
-        
+        newSelect('.header__select');
+        newSelect('.header__user-select');
+        newSelect('.some-select');
     }
 });

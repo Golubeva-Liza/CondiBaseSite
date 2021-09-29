@@ -213,7 +213,7 @@
                                 <object class="baker-rating__star baker-rating__star_big" type="image/svg+xml" data='icons/star.svg' ></object>
                                 <span class="baker-feedback__raiting-number">4.6 (<a href="#">24 отзыва</a>)</span>
                             </div>
-                            <div class="select-block baker-feedback__select-inner">
+                            <!-- <div class="select-block baker-feedback__select-inner">
                                 <div class="select-block__inner ">
                                     <div class="select-block__header">
                                         <span class="select-item">Сначала полезные</span>
@@ -226,6 +226,19 @@
                                         <div class="select-block__item">Сначала с высокой оценкой</div>
                                     </div>
                                 </div>
+                            </div> -->
+                            
+                            <div class="new-select baker-feedback__select-inner">
+                                <button  class="new-select__btn">Сначала полезные</button>
+                                <ul class="new-select__list">
+                                    <li class="new-select__list-item" data-value="old">Сначала старые</li>
+                                    <li class="new-select__list-item" data-value="new">Сначала новые</li>
+                                    <li class="new-select__list-item" data-value="useful">Сначала полезные</li>
+                                    <li class="new-select__list-item" data-value="lowRating">Сначала с низкой оценкой</li>
+                                    <li class="new-select__list-item" data-value="highRating">Сначала с высокой оценкой</li>
+                                </ul>
+                                <!-- для отправки формы в которой находится select, для тех. нужд -->
+                                <input class="new-select__input-hidden" type="text" name="select-category" value="">
                             </div>
                         </div>
 

@@ -19,7 +19,7 @@
             <div class="container">
                 <div class="main-container">
                     <section class="create-profile">
-                        <h2 class="h2 create-profile__h2">Создание профиля кондитера</h2>
+                        <!-- <h2 class="h2 create-profile__h2">Создание профиля кондитера</h2>
                         <div class="create-profile__name-lvl">
                             <div class="main-input create-profile__name">
                                 <label class="main-input__label">
@@ -35,6 +35,17 @@
                                     </div>
                                 </label>
                             </div>
+                        </div> -->
+
+                        <div class="new-select new-select_big some-select">
+                            <button  class="new-select__btn">Начинающий</button>
+                            <ul class="new-select__list">
+                                <li class="new-select__list-item" data-value="beginner">Начинающий</li>
+                                <li class="new-select__list-item" data-value="amateur">Любитель</li>
+                                <li class="new-select__list-item" data-value="pro">Профессионал</li>
+                            </ul>
+                            <!-- для отправки формы в которой находится select, для тех. нужд -->
+                            <input class="new-select__input-hidden" type="text" name="select-category" value="">
                         </div>
                     </section>
 

@@ -21,17 +21,15 @@
                     <a href="index.html"><img class="logo header__logo" src="logo/logo.svg" alt="logo"></a>
                 </div>
                 <div class="header__about-service">
-                    <div class="select-block header__select">
-                        <div class="select-block__inner ">
-                            <div data-cannot-change-header class="select-block__header">
-                                <span class="select-item">О сервисе</span>
-                            </div>
-                            <div  class="select-block__body">
-                                <a href='#'><div class="select-block__item">Гарантия</div></a>
-                                <a href='#'><div class="select-block__item">Работа</div></a>
-                                <a href='#'><div class="select-block__item">Отзывы</div></a>
-                            </div>
-                        </div>
+                    <div class="new-select header__select">
+                        <button data-cannot-change-header class="new-select__btn new-select__btn_big">О сервисе</button>
+                        <ul class="new-select__list">
+                            <li class="new-select__list-item" data-value="beginner">Гарантия</li>
+                            <li class="new-select__list-item" data-value="amateur">Работа</li>
+                            <li class="new-select__list-item" data-value="pro">Отзывы</li>
+                        </ul>
+                        <!-- для отправки формы в которой находится select, для тех. нужд -->
+                        <input class="new-select__input-hidden" type="text" name="select-category" value="">
                     </div>
                     <!-- О сервисе -->
                 </div>
@@ -79,9 +77,9 @@
             </div>   
             <div class="header__item">
                 <a class="header__resume" href="newAcc.html">Разместить резюме</a>
-                <div class="select-block header__user-select">
-                    <div class="select-block__inner ">
-                        <div data-cannot-change-header class="select-block__header">
+                <div class="header__user-select-wrapper">
+                    <div class="new-select header__user-select">
+                        <button data-cannot-change-header class="new-select__btn">
                             <div class="header__account">
                                 <a class="header__gamburger" href="#">
                                     <span></span>
@@ -92,13 +90,14 @@
                                     <img class="header__user-icon" src="icons/profile.svg" alt="">
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="select-block__body">
-                            <a href='#'><div class="select-block__item">Регистрация/вход</div></a>
-                            <a href='#'><div class="select-block__item">Центр помощи</div></a>
-                            <a href='#'><div class="select-block__item">Доверие и безопасность</div></a>
-                        </div>
+                        </button>
+                        <ul class="new-select__list">
+                            <li class="new-select__list-item" data-value="registration">Регистрация</li>
+                            <li class="new-select__list-item" data-value="help">Центр помощи</li>
+                            <li class="new-select__list-item" data-value="safety">Доверие и безопасность</li>
+                        </ul>
+                        <!-- для отправки формы в которой находится select, для тех. нужд -->
+                        <input class="new-select__input-hidden" type="text" name="select-category" value="">
                     </div>
                 </div>
             </div>   
@@ -227,12 +226,7 @@
                                 <div class="result-search__how-many-find">
                                     Найдено <span>23 кондитера</span> рядом с вами.
                                 </div>
-                                <div class="select-block result-search__select-inner">
-                                    <!-- <select name="" id="" class="select-block__select">
-                                        <option value="recom" class="select__option">Рекомендованные</option>
-                                        <option value="chip" class="select__option">Сначала дешевле</option>
-                                    </select> -->
-                                    <!-- select-block__inner_active -->
+                                <!-- <div class="select-block result-search__select-inner">
                                     <div class="select-block__inner">
                                         <div class="select-block__header">
                                             <span class="select-item">Рекомендованные</span>
@@ -245,6 +239,18 @@
                                             <div class="select-block__item">Сначала ближе ко мне</div>
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="new-select result-search__select-inner">
+                                    <button  class="new-select__btn">Рекомендованные</button>
+                                    <ul class="new-select__list">
+                                        <li class="new-select__list-item" data-value="recommended">Рекомендованные</li>
+                                        <li class="new-select__list-item" data-value="cheap">Сначала дешевле</li>
+                                        <li class="new-select__list-item" data-value="expensive">Сначала дороже</li>
+                                        <li class="new-select__list-item" data-value="rating">По убыванию рейтинга</li>
+                                        <li class="new-select__list-item" data-value="near">Сначала ближе ко мне</li>
+                                    </ul>
+                                    <!-- для отправки формы в которой находится select, для тех. нужд -->
+                                    <input class="new-select__input-hidden" type="text" name="select-category" value="">
                                 </div>
                             </div>
 

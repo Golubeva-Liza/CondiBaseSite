@@ -1,0 +1,55 @@
+.new-select{
+    position: relative;
+    &_big{
+        width: 200px;
+    }
+    &_big &__btn, &_big &__list{
+        width: 100%;
+    }
+
+    &__btn{
+        position: relative;
+        padding: 0 15px 0 0;
+        margin: 0;
+        background: #eee;
+        border: none;
+        text-align: start;
+        line-height: 150%;
+        cursor: pointer;
+        &::after{
+            @include small-down-arrow;
+            right: 0;
+        }
+    }
+    &__list{
+        display: none;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(98, 102, 150, 0.1);
+        border-radius: 13px;
+        position: absolute;
+        padding: 18px 0;
+        top: 30px;
+        z-index: 90;
+        &_visible{
+            display: block;
+        }
+    }
+    &__list-item{
+        line-height: 30px;
+        padding: 0 50px 0 18px;
+        cursor: pointer;
+        white-space: nowrap;
+        &:hover{
+            background: #F7F7F7;
+        }
+        &:first-child{
+            margin-top: 10px;
+        }
+        &:last-child{
+            margin-bottom: 10px;
+        }
+    }
+    &__input-hidden{
+        display: none;
+    }
+}

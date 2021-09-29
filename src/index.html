@@ -21,17 +21,15 @@
                     <a href="index.html"><img class="logo header__logo" src="logo/logo.svg" alt="logo"></a>
                 </div>
                 <div class="header__about-service">
-                    <div class="select-block header__select">
-                        <div class="select-block__inner ">
-                            <div data-cannot-change-header class="select-block__header">
-                                <span class="select-item">О сервисе</span>
-                            </div>
-                            <div  class="select-block__body">
-                                <a href='#'><div class="select-block__item">Гарантия</div></a>
-                                <a href='#'><div class="select-block__item">Работа</div></a>
-                                <a href='#'><div class="select-block__item">Отзывы</div></a>
-                            </div>
-                        </div>
+                    <div class="new-select header__select">
+                        <button data-cannot-change-header class="new-select__btn new-select__btn_big">О сервисе</button>
+                        <ul class="new-select__list">
+                            <li class="new-select__list-item" data-value="beginner">Гарантия</li>
+                            <li class="new-select__list-item" data-value="amateur">Работа</li>
+                            <li class="new-select__list-item" data-value="pro">Отзывы</li>
+                        </ul>
+                        <!-- для отправки формы в которой находится select, для тех. нужд -->
+                        <input class="new-select__input-hidden" type="text" name="select-category" value="">
                     </div>
                     <!-- О сервисе -->
                 </div>
@@ -79,9 +77,9 @@
             </div>   
             <div class="header__item">
                 <a class="header__resume" href="newAcc.html">Разместить резюме</a>
-                <div class="select-block header__user-select">
-                    <div class="select-block__inner ">
-                        <div data-cannot-change-header class="select-block__header">
+                <div class="header__user-select-wrapper">
+                    <div class="new-select header__user-select">
+                        <button data-cannot-change-header class="new-select__btn">
                             <div class="header__account">
                                 <a class="header__gamburger" href="#">
                                     <span></span>
@@ -92,13 +90,14 @@
                                     <img class="header__user-icon" src="icons/profile.svg" alt="">
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="select-block__body">
-                            <a href='#'><div class="select-block__item">Регистрация/вход</div></a>
-                            <a href='#'><div class="select-block__item">Центр помощи</div></a>
-                            <a href='#'><div class="select-block__item">Доверие и безопасность</div></a>
-                        </div>
+                        </button>
+                        <ul class="new-select__list">
+                            <li class="new-select__list-item" data-value="registration">Регистрация</li>
+                            <li class="new-select__list-item" data-value="help">Центр помощи</li>
+                            <li class="new-select__list-item" data-value="safety">Доверие и безопасность</li>
+                        </ul>
+                        <!-- для отправки формы в которой находится select, для тех. нужд -->
+                        <input class="new-select__input-hidden" type="text" name="select-category" value="">
                     </div>
                 </div>
             </div>   
