@@ -33,8 +33,27 @@ function changeDate(parent){
                 const selectedDate = e.target.textContent;
                 const numOfMonth = e.target.closest('.calendar__days').getAttribute('data-month');
                 const numOfYear = e.target.closest('.calendar__days').getAttribute('data-year');
-
-                changeDateBtn.querySelector('span').textContent = `${selectedDate} ${shortMonths[numOfMonth]} ${numOfYear} г.`;
+                
+                //если нужно вывести короткий формат даты, где перед цифрами, которые < 10, ставится 0
+                if (changeDateBtn.getAttribute("data-change-date") == "shortDate"){
+                    let selectedDateNum;
+                    let selectedMonthNum;
+                    if (+selectedDate < 10){
+                        selectedDateNum = `0${selectedDate}`;
+                    } else {
+                        selectedDateNum = selectedDate;
+                    }
+                    if (+numOfMonth + 1 < 10){
+                        selectedMonthNum = `0${+numOfMonth + 1}`;
+                    }else{
+                        selectedMonthNum = +numOfMonth + 1;
+                    }
+                    changeDateBtn.querySelector('span').textContent = `к ${selectedDateNum}.${selectedMonthNum}.${numOfYear} г.`;
+                } 
+                //если нужно вывести формат даты, где месяц выводится сокращенным словом (см shortMonths)
+                else {
+                    changeDateBtn.querySelector('span').textContent = `${selectedDate} ${shortMonths[numOfMonth]} ${numOfYear} г.`;
+                }
                 calendarElement.classList.remove('calendar_opened');
             }
         });

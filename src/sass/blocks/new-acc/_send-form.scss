@@ -1,0 +1,19 @@
+.send-form{
+    padding-bottom: 90px;
+    
+    &__check-conditions{
+        margin-top: 20px;
+        max-width: 420px;
+    }
+    &__check-conditions label{
+        font-weight: 400;
+        color: rgba(51, 51, 51, 0.6);
+    }
+    &__link{
+        color: rgba(51, 51, 51, 0.6);
+        text-decoration: underline;
+        &:hover{
+            color: black;
+        }
+    }
+}

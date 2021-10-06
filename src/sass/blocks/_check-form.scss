@@ -1,4 +1,10 @@
 .check-form{
+    &_checkbox-type input{
+        &:checked + .check-form__box{            
+            background: url('data:image/svg+xml,%3Csvg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect x="0.5" y="0.5" width="14" height="14" fill="%23626696" stroke="%23626696"/%3E%3Cpath d="M9.76567 4.36673L5.54534 8.58677C5.23282 8.89935 4.72586 8.89935 4.41304 8.58677L2.23448 6.40804C1.92184 6.09546 1.92184 5.58845 2.23448 5.27581C2.54718 4.96311 3.0541 4.96311 3.36666 5.27569L4.97936 6.88841L8.63331 3.23443C8.94601 2.92174 9.45297 2.92197 9.76555 3.23443C10.0781 3.54707 10.0781 4.05391 9.76567 4.36673Z" fill="white"/%3E%3C/svg%3E') center (center/cover) no-repeat;
+        }
+    }
+
     &__label{
         @include font-weight-300;
         display: block;
@@ -32,6 +38,9 @@
         cursor: pointer;
         &_checked{
             background: url('data:image/svg+xml,%3Csvg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect x="0.5" y="0.5" width="14" height="14" fill="%23626696" stroke="%23626696"/%3E%3Cpath d="M9.76567 4.36673L5.54534 8.58677C5.23282 8.89935 4.72586 8.89935 4.41304 8.58677L2.23448 6.40804C1.92184 6.09546 1.92184 5.58845 2.23448 5.27581C2.54718 4.96311 3.0541 4.96311 3.36666 5.27569L4.97936 6.88841L8.63331 3.23443C8.94601 2.92174 9.45297 2.92197 9.76555 3.23443C10.0781 3.54707 10.0781 4.05391 9.76567 4.36673Z" fill="white"/%3E%3C/svg%3E') center (center/cover) no-repeat;
+        }
+        &_empty{
+            border: 1px solid $main-color;
         }
     }
 }

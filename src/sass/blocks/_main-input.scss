@@ -1,0 +1,68 @@
+.main-input{
+    &__input-wrapper{
+        position: relative;
+    }
+    &__input{
+        margin: 0;
+        line-height: 150%;
+        padding: 0 0 5px 0;
+        width: 100%;
+        border: none;
+        background-color: #fff;
+        outline: none;
+        &::-webkit-input-placeholder { color: rgba(51, 51, 51, 0.5); }
+
+        &_number{
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button{
+                -webkit-appearance: none; 
+            }
+        }
+    }
+    &__input:focus+&__hr{
+        border-bottom: 1px solid rgba(51, 51, 51, 0.9);  
+    }
+    &__unit{
+        position: absolute;
+        right: 0;
+        top: 2px;
+    }
+    &__hr{
+        width: 100%;
+        height: 1px;
+        background-color: rgba(51, 51, 51, 0.3);
+        border: none;
+        margin: 0;
+        &_for-select{
+            margin-top: 5px;
+        }
+    }
+    &__title{
+        margin-bottom: 5px;
+    }
+
+
+    //для нескольких инпутов, количество которых пользователь может увеличить
+    &__several-inputs{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__btn{
+        border: none;
+        padding: 0;
+        background-color: #fff;
+        cursor: pointer;
+        height: 20px;
+        transform: translateY(-4px);
+    }
+    &__btn-icon{
+        height: 20px;
+        pointer-events: none;
+    }
+}
+
+
+.main-input_empty{
+    &::-webkit-input-placeholder { color: $main-color; }
+}

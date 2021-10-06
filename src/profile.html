@@ -38,37 +38,42 @@
                 <div class="header__search-base">
                     <div class="header__search-item">
                         <div class="header__search-title">Местоположение</div>
-                        <div class="header__search-subtitle">Где нужен торт?</div>
+                        <span class="header__search-subtitle">Где нужен торт?</span>
                     </div>
                     <div class="header__search-line"></div>
                     <div class="header__search-item">
-                        <div class="header__search-title">Дата</div>
-                        <div class="header__search-subtitle">К какому дню?</div>
-                        <!-- <div class="calendar header__calendar">
-                            <div class="calendar__month">
-                                <button class="calendar__prev"><object class="calendar__prev-icon" type="image/svg+xml" data="icons/list_left.svg"></object></button>
-                                <h4 class="h4 calendar__current-month"></h4>
-                                <button class="calendar__next"><object class="calendar__next-icon" type="image/svg+xml" data="icons/list_right.svg"></object></button>
-                            </div>
-                            <div class="calendar__dates-wrapper">
-                                <div class="calendar__weekdays">
-                                    <div>пн</div>
-                                    <div>вт</div>
-                                    <div>ср</div>
-                                    <div>чт</div>
-                                    <div>пт</div>
-                                    <div>сб</div>
-                                    <div>вс</div>
+                        <div data-change-date="shortDate" class="header__search-date-wrapper">
+                            <div class="header__search-title">Дата</div>
+                            <span class="header__search-subtitle">К какому дню?</span>
+                        </div>
+                        <div class="header__calendar-wrapper">
+                            <div class="calendar header__calendar">
+                                <div class="calendar__month">
+                                    <button class="calendar__prev"><object class="calendar__prev-icon" type="image/svg+xml" data="icons/list_left.svg"></object></button>
+                                    <h4 class="h4 calendar__current-month"></h4>
+                                    <button class="calendar__next"><object class="calendar__next-icon" type="image/svg+xml" data="icons/list_right.svg"></object></button>
                                 </div>
-                                <div class="calendar__days">
+                                <div class="calendar__dates-wrapper">
+                                    <div class="calendar__weekdays">
+                                        <div>пн</div>
+                                        <div>вт</div>
+                                        <div>ср</div>
+                                        <div>чт</div>
+                                        <div>пт</div>
+                                        <div>сб</div>
+                                        <div>вс</div>
+                                    </div>
+                                    <div class="calendar__days">
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
+                    
                     <div class="header__search-line"></div>
                     <div class="header__search-item">
                         <div class="header__search-title">Особенности</div>
-                        <div class="header__search-subtitle">Какой нужен торт?</div>
+                        <span class="header__search-subtitle">Какой нужен торт?</span>
                     </div>
                     <div class="header__search-circle">
                         <img class="header__search-icon" src="icons/search.svg" alt="">
@@ -198,7 +203,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="about-baker__hr">
+                                <hr class="hr about-baker__hr">
                                 <div class="about-baker__special-info">
                                     <!-- можно сделать и через details и summary -->
 
@@ -258,22 +263,22 @@
                                     </div>
 
                                 </div>
-                                <hr class="about-baker__hr">
+                                <hr class="hr about-baker__hr">
                             </div>
-                            <div class="about-baker__technics">
-                                <h4 class="h4 about-baker__technics-h4">Техники, с которыми работаю</h4>
-                                <div class="about-baker__technics-wrapper">
-                                    <ul class="about-baker__technics-list">
-                                        <li class="about-baker__technics-list-item">#Минимализм</li>
-                                        <li class="about-baker__technics-list-item">#Пряники</li>
-                                        <li class="about-baker__technics-list-item">#Леденцы</li>
-                                        <li class="about-baker__technics-list-item">#Зефир</li>
-                                        <li class="about-baker__technics-list-item">#Безе</li>
-                                        <li class="about-baker__technics-list-item">#Шоколадная фото-печать</li>
-                                        <li class="about-baker__technics-list-item">#Чизкейк</li>
-                                        <li class="about-baker__technics-list-item">#Многоярусные торты</li>
-                                        <li class="about-baker__technics-list-item">#Мастика</li>
-                                        <li class="about-baker__technics-list-item">#Поп Кейкс</li>
+                            <div class="techniques about-baker__techniques">
+                                <h4 class="h4 techniques__h4">Техники, с которыми работаю</h4>
+                                <div class="techniques__wrapper">
+                                    <ul class="techniques__list">
+                                        <li class="techniques__list-item">#Минимализм</li>
+                                        <li class="techniques__list-item">#Пряники</li>
+                                        <li class="techniques__list-item">#Леденцы</li>
+                                        <li class="techniques__list-item">#Зефир</li>
+                                        <li class="techniques__list-item">#Безе</li>
+                                        <li class="techniques__list-item">#Шоколадная фото-печать</li>
+                                        <li class="techniques__list-item">#Чизкейк</li>
+                                        <li class="techniques__list-item">#Многоярусные торты</li>
+                                        <li class="techniques__list-item">#Мастика</li>
+                                        <li class="techniques__list-item">#Поп Кейкс</li>
                                     </ul>
                                 </div>
                             </div>
@@ -295,7 +300,7 @@
                         
                     </section>
 
-                    <hr class="big-hr">
+                    <hr class="hr hr_m60">
 
                     <section class="baker-feedback">
                         <div class="baker-feedback__top">
@@ -303,20 +308,6 @@
                                 <object class="baker-rating__star baker-rating__star_big" type="image/svg+xml" data='icons/star.svg' ></object>
                                 <span class="baker-feedback__raiting-number">4.6 (<a href="#">24 отзыва</a>)</span>
                             </div>
-                            <!-- <div class="select-block baker-feedback__select-inner">
-                                <div class="select-block__inner ">
-                                    <div class="select-block__header">
-                                        <span class="select-item">Сначала полезные</span>
-                                    </div>
-                                    <div class="select-block__body">
-                                        <div class="select-block__item">Сначала старые</div>
-                                        <div class="select-block__item">Сначала новые</div>
-                                        <div class="select-block__item">Сначала полезные</div>
-                                        <div class="select-block__item">Сначала с низкой оценкой</div>
-                                        <div class="select-block__item">Сначала с высокой оценкой</div>
-                                    </div>
-                                </div>
-                            </div> -->
                             
                             <div class="new-select baker-feedback__select-inner">
                                 <button  class="new-select__btn">Сначала полезные</button>

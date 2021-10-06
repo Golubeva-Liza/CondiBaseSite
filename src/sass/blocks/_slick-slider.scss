@@ -43,13 +43,14 @@
 .slider{
     position: relative;
     &__item{
+        position: relative;
         width: 193px;
         height: 213px;
         border-radius: 4px;
         overflow: hidden;
         margin: 0 11px;
         // opacity: 0.6;
-        img{
+        img:not(.upload-photo__icon){
             width: 100%;
             height: 100%;
         }
@@ -57,6 +58,10 @@
     // &__item.slick-center{
     //     opacity: 1;
     // }
+    &__photo{
+        width: 100%;
+        height: 100%;
+    }
 
     //"пользовательские" настройки подключенного слайдера
     .slick-arrow{
@@ -84,25 +89,6 @@
         background: url('../../icons/slider-arrow.svg') 0 0 / 100% no-repeat;
         transform: rotate(180deg);
     }
-}
-
-
-.baker-profile__slider{
-    display: none;
-    .slider__item{
-        width: 183px;
-        height: 201px;
-    }
-    .slick-arrow{
-        position: absolute;
-        top: 89px;
-        width: 24px;
-        height: 24px;
-        &:hover{
-            width: 30px;
-            height: 30px;
-        }
-    }
     .slick-dots{
         display: flex;
         justify-content: center;
@@ -128,5 +114,31 @@
             background: #C4C4C4;
             cursor: pointer;
         }
+    }
+}
+
+
+.baker-profile__slider{
+    display: none;
+    .slider__item{
+        width: 183px;
+        height: 201px;
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 89px;
+        width: 24px;
+        height: 24px;
+        &:hover{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.create-profile__slider{
+    .slider__item{
+        width: 183px;
+        height: 201px;
+        margin: 0 9px;
     }
 }

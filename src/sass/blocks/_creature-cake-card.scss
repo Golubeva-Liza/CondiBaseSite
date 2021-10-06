@@ -1,0 +1,63 @@
+.creature-cake-card{
+    width: 691px;
+    background: #FFFFFF;
+    border: 1px solid #E9EBFE;
+    border-radius: 13px;
+    padding: 23px 45px;
+    &__name-input{
+        width: 320px;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__num-order button{
+        width: 100%;
+    }
+
+    &__center{
+        display: flex;
+        margin-bottom: 25px;
+    }
+    &__input{
+        width: 320px;
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__photo{
+        margin-right: 20px;
+        width: 182px;
+        height: 182px;
+        border-radius: 4px;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__bottom-inputs{
+        display: flex;
+    }
+    &__input-price{
+        width: 108px;
+        margin-right: 60px;
+    }
+
+    &__weights{
+        max-width: 240px;
+    }
+    &__weights .main-input__input-wrapper{
+        width: 55px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    
+    &__add-btn{
+        transform: translateY(-10px);
+    }
+}

@@ -1,8 +1,9 @@
 .button{
-    width: 175px;
+    // width: 175px;
     height: 51px;
     background: $main-color;
     border-radius: 25.5px;
+    padding: 0 25px;
 
     font-weight: 600;
     display: flex;
@@ -22,13 +23,15 @@
     }
 
     &_small{
-        width: 114px;
+        // width: 114px;
+        padding: 0 16px;
         height: 38px;
         font-size: 13px;
     }
 
     &_v2{
-        width: 161px;
+        // width: 161px;
+        padding: 0 18px;
         height: 43px;
         border: 1px solid $additional-color;
         background: #fff;

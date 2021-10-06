@@ -18,39 +18,464 @@
         <main class="main">
             <div class="container">
                 <div class="main-container">
-                    <section class="create-profile">
-                        <!-- <h2 class="h2 create-profile__h2">Создание профиля кондитера</h2>
-                        <div class="create-profile__name-lvl">
-                            <div class="main-input create-profile__name">
-                                <label class="main-input__label">
-                                    <span class="text-value">Имя</span>
-                                    <input type="text" class="main-input__input" placeholder="Ваше имя">
-                                </label>
+                    <form action="" class="new-acc-form">
+                        <section class="create-profile">
+                            <h2 class="h2 create-profile__h2">Создание профиля кондитера</h2>
+                            <div class="create-profile__name-lvl">
+                                <div class="main-input create-profile__name">
+                                    <label class="main-input__label">
+                                        <div class="text-value-bold main-input__title">Имя</div>
+                                        <div class="main-input__input-wrapper">
+                                            <input type="text" class="main-input__input" name="user-name" placeholder="Ваше имя">
+                                            <hr class="main-input__hr">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="main-input create-profile__lvl">
+                                    <label class="main-input__label">
+                                        <div class="text-value-bold main-input__title">Уровень профессионализма</div>
+                                    </label>
+                                    <div class="new-select new-select_big main-input__select">
+                                        <button type="button" class="new-select__btn">Начинающий</button>
+                                        <ul class="new-select__list">
+                                            <li class="new-select__list-item" data-value="beginner">Начинающий</li>
+                                            <li class="new-select__list-item" data-value="amateur">Любитель</li>
+                                            <li class="new-select__list-item" data-value="pro">Профессионал</li>
+                                        </ul>
+                                        <!-- для отправки формы в которой находится select, для тех. нужд -->
+                                        <input class="new-select__input-hidden" type="text" name="user-lvl" value="beginner">
+                                    </div>
+                                    <hr class="main-input__hr main-input__hr_for-select">
+                                </div>
+                                
                             </div>
-                            <div class="main-input create-profile__lvl">
-                                <label class="main-input__label">
-                                    <span class="text-value">Уровень профессионализма</span>
-                                    <div class="main-input__select">
+
+                            <div class="create-profile__carousel-top">
+                                <h4 class="h4 create-profile__h4">Загрузите не менее 5 фото своих тортов в карусель</h4>
+                                <div class="create-profile__carousel-top-btns">
+                                    <button type="button" class="button button_v2 js-add-slide">Добавить фото</button>
+                                    <button type="button" class="button button_v2 js-remove-slide">Удалить фото</button>
+                                </div>
+                            </div>
+                            
+                            <div class="create-profile__photos-carousel">
+                                <div class="slider create-profile__slider">
+                                    <div data-addSlidePhoto class="slider__item">
+                                        <div class="upload-photo slider__photo">
+                                            <input class="upload-photo__input" name="slide-photo-1" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <input class="create-profile__slide-tag-input" name="slide-tag-input-1" type="text" value="dadsa" placeholder="Введите #тэг">
+                                    </div>
+                                    <div data-addSlidePhoto class="slider__item">
+                                        <div class="upload-photo slider__photo">
+                                            <input class="upload-photo__input" name="slide-photo-2" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <input class="create-profile__slide-tag-input" name="slide-tag-input-2" type="text" placeholder="Введите #тэг">
+                                    </div>
+                                    <div data-addSlidePhoto class="slider__item">
+                                        <div class="upload-photo slider__photo">
+                                            <input class="upload-photo__input" name="slide-photo-3" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <input class="create-profile__slide-tag-input" name="slide-tag-input-3" type="text" placeholder="Введите #тэг">
+                                    </div>
+                                    <div data-addSlidePhoto class="slider__item">
+                                        <div class="upload-photo slider__photo">
+                                            <input class="upload-photo__input" name="slide-photo-4" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <input class="create-profile__slide-tag-input" name="slide-tag-input-4" type="text" placeholder="Введите #тэг">
+                                    </div>
+                                    <div data-addSlidePhoto class="slider__item">
+                                        <div class="upload-photo slider__photo">
+                                            <input class="upload-photo__input" name="slide-photo-5" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <input class="create-profile__slide-tag-input" name="slide-tag-input-5" type="text" placeholder="Введите #тэг">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="create-profile__bottom">
+                                <div class="create-profile__bottom-left">
+                                    <div class="create-profile__add-hashtags">
+                                        <div class="warning-block create-profile__warning-block">
+                                            <div class="warning-block__title">Добавьте хэштеги</div>
+                                            Хэштеги помогут заказчику увидеть фото наиболее подходящих к его запросу тортов. Это повысит шансы заказа сладостей именно у вас.
+                                        </div>
+                                    </div>
+                                    <div class="create-profile__about">
+                                        <div class="create-profile__avatar">
+                                            <img src="./img/cake-example/32.jpg" alt="default-avatar">
+                                            <!-- "./icons/default-avatar.svg" -->
+                                        </div>
+                                        <div class="create-profile__about-wrapper">
+                                            <h4 class="h4">О себе</h4>
+                                            <textarea name="textarea-about" class="create-profile__about-textarea" placeholder="Расскажите немного о себе"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="techniques create-profile__techniques">
+                                    <h4 class="h4 techniques__h4">Выберите ваши техники и направления в работе</h4>
+                                    <div class="techniques__wrapper">
+                                        <div class="check-form check-form_checkbox-type techniques__check-form">
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-festive"  type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Праздничный
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-diet" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Низкокалорийный (диетический)
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-child" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Детский
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-wedding" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Свадебный
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-gingerbread" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Пряники
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-cheesecake" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Чизкейки
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-multiTiered" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Многоярусные торты
+                                            </label>
+                                            <label class="check-form__label">
+                                                <input class="check-form__input" name="technique-candy" type="checkbox">
+                                                <span data-box="radio" class="check-form__box"></span>
+                                                Леденцы
+                                            </label>
+                                        </div>
+    
                                         
                                     </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <hr class="hr hr_m60">
+
+                        <section class="delivery">
+                            <h4 class="h4 delivery__h4">Доступные способы доставки</h4>
+                            <div class="check-form check-form_checkbox-type delivery__check-form">
+                                <label class="check-form__label">
+                                    <input class="check-form__input" name="pickup" type="checkbox">
+                                    <span class="check-form__box"></span>
+                                    Самовывоз
+                                </label>
+                                <div class="delivery__pickup-wrapper">
+                                    <div class="main-input delivery__pickup-price">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Цена</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="pickup-price" placeholder="0">
+                                                <hr class="main-input__hr">
+                                                <span class="main-input__unit">₽</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="warning-block delivery__warning-block">
+                                        Точный адрес необходим для фильтрации поиска с учетом местоположения и не отображается в профиле. Заказчик увидит ваш полный адрес при оплате в случае выбора самовывоза. 
+                                    </div>
+                                    <div class="delivery__inputs-wrapper">
+                                        <div class="main-input delivery__inputs">
+                                            <label class="main-input__label">
+                                                <div class="text-value-bold main-input__title">Город, район</div>
+                                                <div class="main-input__input-wrapper">
+                                                    <input type="text" class="main-input__input" name="city" placeholder="Введите название города и района">
+                                                    <hr class="main-input__hr">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="main-input delivery__inputs">
+                                            <label class="main-input__label">
+                                                <div class="text-value-bold main-input__title">Улица, дом</div>
+                                                <div class="main-input__input-wrapper">
+                                                    <input type="text" class="main-input__input" name="street" placeholder="Введите название улицы и номер дома">
+                                                    <hr class="main-input__hr">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="main-input delivery__inputs">
+                                            <label class="main-input__label">
+                                                <div class="text-value-bold main-input__title">Квартира, этаж</div>
+                                                <div class="main-input__input-wrapper">
+                                                    <input type="text" class="main-input__input" name="flat" placeholder="Введите номер квартиры и этажа">
+                                                    <hr class="main-input__hr">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="check-form__label">
+                                    <input class="check-form__input" name="delivery" type="checkbox">
+                                    <span class="check-form__box"></span>
+                                    Доставка
+                                </label>
+                                <div class="delivery__delivery-from-baker">
+                                    <div class="main-input delivery__delivery-from-baker-price">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Цена по городу</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="delivery-price" placeholder="0">
+                                                <hr class="main-input__hr">
+                                                <span class="main-input__unit">₽</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="hr hr_m60">
+
+                        <section class="rules">
+                            <h4 class="h4 rules__h4">Правила для заказа</h4>
+                            <div class="rules__for-ordering">
+                                <div class="rules__for-ordering-item">
+                                    <div class="main-input rules__inputs">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Мин. кол-во часов до заказа</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="min-hours-before-order" placeholder="48">
+                                                <hr class="main-input__hr">
+                                                <span class="main-input__unit">часов</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="main-input rules__inputs">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Макс. кол-во тортов на одни сутки</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="max-cakes-per-day" placeholder="3">
+                                                <hr class="main-input__hr">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="rules__for-ordering-item">
+                                    <div class="main-input rules__inputs">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Макс. кол-во дней для предзаказа</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="max-days-before-pre-order" placeholder="60">
+                                                <hr class="main-input__hr">
+                                                <span class="main-input__unit">дней</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="main-input rules__inputs">
+                                        <label class="main-input__label">
+                                            <div class="text-value-bold main-input__title">Мин. сумма заказа</div>
+                                            <div class="main-input__input-wrapper">
+                                                <input type="number" class="main-input__input main-input__input_number" name="min-price-for-order" placeholder="1000">
+                                                <hr class="main-input__hr">
+                                                <span class="main-input__unit">₽</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="h4 rules__h4">Правила для отмены заказа</h4>
+                            <div class="rules__for-cancellation">
+                                <div class="main-input rules__inputs">
+                                    <label class="main-input__label">
+                                        <div class="text-value-bold main-input__title">Мин. кол-во часов до заказа</div>
+                                        <div class="main-input__input-wrapper">
+                                            <input type="number" class="main-input__input main-input__input_number" name="min-hours-before-cancellation" placeholder="24">
+                                            <hr class="main-input__hr">
+                                            <span class="main-input__unit">часов</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </section>
+
+                        <hr class="hr hr_m60">
+
+                        <section class="add-toppings">
+                            <h3 class="h3 add-toppings__h3">Добавьте варианты вкусов тортов</h3>
+                            <div class="add-toppings__cards-wrapper">
+                                <!-- карточка добавления товара -->
+                                <div class="creature-cake-card add-toppings__card">
+                                    <div class="creature-cake-card__top">
+                                        <div class="main-input creature-cake-card__name-input">
+                                            <label class="main-input__label">
+                                                <div class="text-value-bold main-input__title">Введите название вкуса</div>
+                                                <div class="main-input__input-wrapper">
+                                                    <input type="text" class="main-input__input main-input__input_number" name="cake-name" placeholder="Введите название">
+                                                    <hr class="main-input__hr">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="main-input creature-cake-card__num-order">
+                                            <label class="main-input__label">
+                                                <div class="text-value-bold main-input__title">Порядок в выдаче</div>
+                                            </label>
+                                            <div class="new-select main-input__select">
+                                                <button type="button" class="new-select__btn">1</button>
+                                                <ul class="new-select__list">
+                                                    <li class="new-select__list-item" data-value="1">1</li>
+                                                    <li class="new-select__list-item" data-value="2">2</li>
+                                                    <li class="new-select__list-item" data-value="3">3</li>
+                                                </ul>
+                                                ы
+                                                <input class="new-select__input-hidden" type="text" name="cake-num-order" value="">
+                                            </div>
+                                            <hr class="main-input__hr">
+                                        </div> -->
+                                    </div>
+
+                                    <div class="creature-cake-card__center">
+                                        <div class="upload-photo creature-cake-card__photo">
+                                            <input class="upload-photo__input" name="cake-photo" type="file">
+                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
+
+                                            <div class="upload-photo__img-wrapper">
+                                                <div class="upload-photo__remove">
+                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
+                                                </div>
+                                                <img class="upload-photo__img" src="" alt="cake">
+                                            </div>
+                                        </div>
+                                        <div class="creature-cake-card__inputs-wrapper">
+                                            <div class="main-input creature-cake-card__input">
+                                                <label class="main-input__label">
+                                                    <div class="text-value-bold main-input__title">Коржи</div>
+                                                    <div class="main-input__input-wrapper">
+                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-shortcake" placeholder="Введите краткое описание">
+                                                        <hr class="main-input__hr">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="main-input creature-cake-card__input">
+                                                <label class="main-input__label">
+                                                    <div class="text-value-bold main-input__title">Начинка</div>
+                                                    <div class="main-input__input-wrapper">
+                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-topping" placeholder="Введите краткое описание">
+                                                        <hr class="main-input__hr">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="main-input creature-cake-card__input">
+                                                <label class="main-input__label">
+                                                    <div class="text-value-bold main-input__title">Покрытие</div>
+                                                    <div class="main-input__input-wrapper">
+                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-coverage" placeholder="Введите краткое описание">
+                                                        <hr class="main-input__hr">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="creature-cake-card__bottom">
+                                        <div class="creature-cake-card__bottom-inputs">
+                                            <div class="main-input creature-cake-card__input-price">
+                                                <label class="main-input__label">
+                                                    <div class="text-value-bold main-input__title">Цена за 1 кг</div>
+                                                    <div class="main-input__input-wrapper">
+                                                        <input type="number" class="main-input__input main-input__input_number" name="cake-price" placeholder="0">
+                                                        <hr class="main-input__hr">
+                                                        <span class="main-input__unit">₽</span>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="main-input creature-cake-card__weights">
+                                                <label class="main-input__label">
+                                                    <div class="text-value-bold main-input__title">Выберите возможный вес</div>
+                                                    <div class="main-input__several-inputs">
+                                                        <div class="main-input__input-wrapper">
+                                                            <input type="number" class="main-input__input main-input__input_number" step="0.01" name="cake-weight-1" placeholder="0">
+                                                            <hr class="main-input__hr">
+                                                            <span class="main-input__unit">кг</span>
+                                                        </div>
+                                                        <button type="button" class="main-input__btn">
+                                                            <object class="main-input__btn-icon" type="image/svg+xml" data="icons/preview-more.svg"></object>
+                                                        </button>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button button_v2 button_v2_small creature-cake-card__add-btn">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="hr hr_m60">
+
+                        <section class="send-form">
+                            <button class="button" type="submit">
+                                Опубликовать профиль
+                            </button>
+                            <div class="check-form check-form_checkbox-type send-form__check-conditions">
+                                <label class="check-form__label">
+                                    <input class="check-form__input" name="consent" type="checkbox">
+                                    <span class="check-form__box"></span>
+
+                                    Согласен с условиями обработки <a href="#" class="send-form__link">персональных данных</a>, 
+                                    <a href="#" class="send-form__link">Правилами отмены</a>, <a href="#" class="send-form__link">Правилами компенсации</a>, 
+                                    <a href="#" class="send-form__link">Пользовательского соглашения</a> и <a href="#" class="send-form__link">Публичной оферты</a>.
                                 </label>
                             </div>
-                        </div> -->
+                        </section>
 
-                        <div class="new-select new-select_big some-select">
-                            <button  class="new-select__btn">Начинающий</button>
-                            <ul class="new-select__list">
-                                <li class="new-select__list-item" data-value="beginner">Начинающий</li>
-                                <li class="new-select__list-item" data-value="amateur">Любитель</li>
-                                <li class="new-select__list-item" data-value="pro">Профессионал</li>
-                            </ul>
-                            <!-- для отправки формы в которой находится select, для тех. нужд -->
-                            <input class="new-select__input-hidden" type="text" name="select-category" value="">
-                        </div>
-                    </section>
+                    </form>
 
-                    
-                    
                 </div>
             </div>
         </main>

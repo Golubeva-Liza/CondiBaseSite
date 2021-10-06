@@ -1,3 +1,91 @@
 .create-profile{
-    padding: 60px 0;
+    padding-top: 60px;
+    &__h2{
+        max-width: 420px;
+        margin-bottom: 35px;
+    }
+    &__h4{
+        max-width: 240px;
+    }
+    &__carousel-top{
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__carousel-top-btns{
+        display: flex;
+        button {
+            margin-left: 20px;
+            height: 37px;
+        }
+    }
+    &__name-lvl{
+        display: flex;
+        margin-bottom: 35px;
+    }
+    &__name{
+        width: 200px;
+        margin-right: 35px;
+    }
+    &__photos-carousel{
+        margin-bottom: 35px;
+    }
+    &__bottom-left{
+        width:590px;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__warning-block{
+        margin-bottom: 35px;
+    }
+    &__about{
+        display: flex;
+    }
+    &__avatar{
+        margin-right: 35px;
+        width: 115px;
+        height: 115px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    &__about-wrapper{
+        width: 437px;
+    }
+    &__about-textarea{
+        margin-top: 8px;
+        resize: none;
+        width: 100%;
+        height: 80px;
+        border: 1px solid rgba(51, 51, 51, 0.3);
+        border-radius: 4px;  
+        padding: 8px 12px;
+        // margin-bottom: 14px;
+        outline: none;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+        &:hover,
+        &:active{
+            border: 1px solid rgba(51, 51, 51, 0.5);
+        }
+    }
+
+    &__slide-tag-input{
+        position: absolute;
+        bottom: 14px;
+        left: 14px;
+
+        padding: 4px 12px;
+
+        width: 156px;
+        height: 30px;
+
+        background: #F7F7F7;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+    }
 }

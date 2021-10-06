@@ -1,0 +1,19 @@
+.rules{
+    &__h4{
+        margin-bottom: 35px;
+    }
+    &__for-ordering{
+        margin-bottom: 50px;
+    }
+    &__for-ordering-item{
+        display: flex;
+        margin-top: 35px;
+        :first-child{
+            margin-top: 0;
+        }
+    }
+    &__inputs{
+        width: 267px;
+        margin-right: 60px;
+    }
+}

@@ -133,7 +133,6 @@
       "profileLink": "#"
     }
   ],
-
   "comments": [
     {
       "avatar": "В",
@@ -172,7 +171,6 @@
       "noCount": 1
     }
   ],
-
   "toppings": [
     {
       "taste": "бананза",
@@ -223,8 +221,7 @@
       ]
     }
   ],
-
   "requests": [
-      
+    
   ]
 }

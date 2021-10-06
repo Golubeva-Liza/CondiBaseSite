@@ -37,6 +37,8 @@ html, body {
 .container-column-8{
     width: 793px;
 }
+
+
 .h1{
     @include title;
     font-size: 45px;
@@ -45,10 +47,12 @@ html, body {
 .h2 {
     @include title;
     font-size: 35px;
+    line-height: 110%;
 }
 .h3 {
     @include title;
     font-size: 24px;
+    line-height: 120%;
 }
 .h4 {
     @include title;
@@ -104,22 +108,40 @@ html, body {
         background: $blocks-color-hover;
     }
 }
+.text-value-bold{
+    font-weight: 600;
+}
 .text-value{
     font-weight: 400;
 }
 .text-value-thin{
     font-weight: 300;
 }
-.big-hr{
+.hr{
     width: 100%;
-    height: 1px;
-    background-color: #e9ebfe;
+    height: 1px;   
+    background-color: #E9EBFE; 
     border: none;
-    margin: 50px 0;
+    &_m60{
+        margin: 60px 0;
+    }
+    &_m35{
+        margin: 35px 0;
+    }
 }
+
 .see-more{
     display: flex;
     justify-content: space-between;
+}
+.warning-block{
+    padding-left: 20px;
+    border-left: 2px solid $main-color-hover;
+    font-weight: 300;
+    &__title{
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -147,6 +169,10 @@ html, body {
 @import 'blocks/selected-product';
 @import 'blocks/hint';
 @import 'blocks/calendar';
+@import 'blocks/main-input';
+@import 'blocks/techniques';
+@import 'blocks/creature-cake-card';
+@import 'blocks/upload-photo';
 
 
 
@@ -167,3 +193,7 @@ html, body {
 @import 'blocks/baker-profile/toppings';
 @import 'blocks/baker-profile/baker-feedback';
 @import 'blocks/new-acc/create-profile';
+@import 'blocks/new-acc/delivery';
+@import 'blocks/new-acc/rules';
+@import 'blocks/new-acc/add-toppings';
+@import 'blocks/new-acc/send-form';

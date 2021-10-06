@@ -27,7 +27,6 @@
         position: relative;
     }
     &__search-base{
-        width: 530px;
         height: 62px;
         background: #FFFFFF;
         border-radius: 13px;
@@ -103,9 +102,13 @@
         }
     }
 
-    &__calendar{
-        top: 65px;
-        left: 0;
-        transform: translateX(-35%);
+    &__calendar-wrapper{
+        z-index: 99;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-33%);
+    }
+    &__search-date-wrapper{
+        min-width: 100px;
     }
 }

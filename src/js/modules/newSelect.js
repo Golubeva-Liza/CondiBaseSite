@@ -29,7 +29,6 @@ function newSelect(selector, parentOfSelectBlock = 0){
         if (selectBtn.querySelector('.header__account')){
             e.stopPropagation();
         }
-
         selectBody.classList.toggle(activeClass);
 
         //клик вне дропдауна
@@ -47,8 +46,7 @@ function newSelect(selector, parentOfSelectBlock = 0){
             }
 
             selectInput.value = this.dataset.value;//dataset - список атрибутов
-
-            selectBody.classList.remove(activeClass);   
+            selectBody.classList.remove(activeClass);  
             
             document.removeEventListener('click', selectHide, false);
 

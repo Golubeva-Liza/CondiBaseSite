@@ -3,16 +3,20 @@
 
 import newSelect from './modules/newSelect';
 import doubleangeSlider from './modules/doubleRangeSlider';
-import radio from './modules/radioInput';
+import changeRadio from './modules/radioInput';
 import pagination from './modules/pagination';
 import BakerCards from './modules/bakerCards';
 import Comments from './modules/comments';
 import ToppingCard from './modules/toppingСard';
 import spoiler from './modules/spoiler';
-import uploadFile from './modules/uploadFile';
+import changeDate from './modules/changeDate';
 import chooseCake from './modules/chooseCake';
 import hints from './modules/hints';
-import calendar from './modules/calendar';
+import forms from './modules/newAccForm';
+import addMoreWeights from './modules/addMoreWeights';
+import addCakePhoto from './modules/addCakePhoto';
+import sliderWithAddSlide from './modules/sliderWithAddSlide';
+import validationForm from './modules/validationForm';
 
 
 
@@ -20,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if((window.location.href == "http://localhost:3000/") || window.location.pathname == "/index.html"){
         newSelect('.header__select');
         newSelect('.header__user-select');
+        changeDate(document.querySelector('.header'));
     }
 
     if(window.location.pathname == "/result-search.html"){
@@ -47,9 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         variableWidth: true,
                     });
                 });
-                pagination('cardsWrapper', bakerCardsInfo, 3);//передается id без решетки, массив данных (каждый item - класс)
+                pagination('cardsWrapper', bakerCardsInfo, 2);//передается id без решетки, массив данных (каждый item - класс)
             });
-        radio();
+        changeRadio(document.querySelector('.sort-form__check-rating'));
+        changeRadio(document.querySelector('.sort-form__check-level'));
     }
 
 
@@ -98,6 +104,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if(window.location.pathname == "/newAcc.html"){
         newSelect('.header__select');
         newSelect('.header__user-select');
-        newSelect('.some-select');
+        newSelect('.main-input__select');
+        forms('.new-acc-form');
+
+        addMoreWeights('.creature-cake-card__weights');
+        addCakePhoto(document.querySelector('.creature-cake-card'), {
+            accept: ['.png', '.jpg', '.jpeg'] //какие типы файлов поддерживаются
+        });
+
+        sliderWithAddSlide();
+
+        document.querySelectorAll('[data-addSlidePhoto]').forEach(slide => {
+            if (!slide.classList.contains('slick-cloned')){
+                addCakePhoto(slide, {
+                    accept: ['.png', '.jpg', '.jpeg'] //какие типы файлов поддерживаются
+                });
+            }
+
+        })
+
+        validationForm(document.querySelector('button[type="submit"]'));
     }
 });

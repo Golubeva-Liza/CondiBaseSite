@@ -71,7 +71,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function(){
     gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel("styles"));
     gulp.watch("src/*.html").on("change", browserSync.reload);
-    gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
+    // gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
     gulp.watch(['src/js/**/*.js', '!src/js/bundle.js']).on("change", scripts);
     gulp.watch(['src/html/**/*.html']).on("change", gulp.parallel("fileinclude"));
 });

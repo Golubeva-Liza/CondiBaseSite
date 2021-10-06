@@ -5,6 +5,9 @@
     }
     &__cards{
         margin-bottom: 35px;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
     &__wrapper{
         display: flex;
