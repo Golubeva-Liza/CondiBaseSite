@@ -215,67 +215,13 @@
                                     <span class="check-form__box"></span>
                                     Самовывоз
                                 </label>
-                                <div class="delivery__pickup-wrapper">
-                                    <div class="main-input delivery__pickup-price">
-                                        <label class="main-input__label">
-                                            <div class="text-value-bold main-input__title">Цена</div>
-                                            <div class="main-input__input-wrapper">
-                                                <input type="number" class="main-input__input main-input__input_number" name="pickup-price" placeholder="0">
-                                                <hr class="main-input__hr">
-                                                <span class="main-input__unit">₽</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="warning-block delivery__warning-block">
-                                        Точный адрес необходим для фильтрации поиска с учетом местоположения и не отображается в профиле. Заказчик увидит ваш полный адрес при оплате в случае выбора самовывоза. 
-                                    </div>
-                                    <div class="delivery__inputs-wrapper">
-                                        <div class="main-input delivery__inputs">
-                                            <label class="main-input__label">
-                                                <div class="text-value-bold main-input__title">Город, район</div>
-                                                <div class="main-input__input-wrapper">
-                                                    <input type="text" class="main-input__input" name="city" placeholder="Введите название города и района">
-                                                    <hr class="main-input__hr">
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="main-input delivery__inputs">
-                                            <label class="main-input__label">
-                                                <div class="text-value-bold main-input__title">Улица, дом</div>
-                                                <div class="main-input__input-wrapper">
-                                                    <input type="text" class="main-input__input" name="street" placeholder="Введите название улицы и номер дома">
-                                                    <hr class="main-input__hr">
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="main-input delivery__inputs">
-                                            <label class="main-input__label">
-                                                <div class="text-value-bold main-input__title">Квартира, этаж</div>
-                                                <div class="main-input__input-wrapper">
-                                                    <input type="text" class="main-input__input" name="flat" placeholder="Введите номер квартиры и этажа">
-                                                    <hr class="main-input__hr">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <label class="check-form__label">
                                     <input class="check-form__input" name="delivery" type="checkbox">
                                     <span class="check-form__box"></span>
                                     Доставка
                                 </label>
-                                <div class="delivery__delivery-from-baker">
-                                    <div class="main-input delivery__delivery-from-baker-price">
-                                        <label class="main-input__label">
-                                            <div class="text-value-bold main-input__title">Цена по городу</div>
-                                            <div class="main-input__input-wrapper">
-                                                <input type="number" class="main-input__input main-input__input_number" name="delivery-price" placeholder="0">
-                                                <hr class="main-input__hr">
-                                                <span class="main-input__unit">₽</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
+                            
                             </div>
                         </section>
 
@@ -349,117 +295,19 @@
                         <section class="add-toppings">
                             <h3 class="h3 add-toppings__h3">Добавьте варианты вкусов тортов</h3>
                             <div class="add-toppings__cards-wrapper">
-                                <!-- карточка добавления товара -->
-                                <div class="creature-cake-card add-toppings__card">
-                                    <div class="creature-cake-card__top">
-                                        <div class="main-input creature-cake-card__name-input">
-                                            <label class="main-input__label">
-                                                <div class="text-value-bold main-input__title">Введите название вкуса</div>
-                                                <div class="main-input__input-wrapper">
-                                                    <input type="text" class="main-input__input main-input__input_number" name="cake-name" placeholder="Введите название">
-                                                    <hr class="main-input__hr">
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <!-- <div class="main-input creature-cake-card__num-order">
-                                            <label class="main-input__label">
-                                                <div class="text-value-bold main-input__title">Порядок в выдаче</div>
-                                            </label>
-                                            <div class="new-select main-input__select">
-                                                <button type="button" class="new-select__btn">1</button>
-                                                <ul class="new-select__list">
-                                                    <li class="new-select__list-item" data-value="1">1</li>
-                                                    <li class="new-select__list-item" data-value="2">2</li>
-                                                    <li class="new-select__list-item" data-value="3">3</li>
-                                                </ul>
-                                                ы
-                                                <input class="new-select__input-hidden" type="text" name="cake-num-order" value="">
-                                            </div>
-                                            <hr class="main-input__hr">
-                                        </div> -->
-                                    </div>
-
-                                    <div class="creature-cake-card__center">
-                                        <div class="upload-photo creature-cake-card__photo">
-                                            <input class="upload-photo__input" name="cake-photo" type="file">
-                                            <img class="upload-photo__icon" src="icons/upload2.svg"></img>
-
-                                            <div class="upload-photo__img-wrapper">
-                                                <div class="upload-photo__remove">
-                                                    <img data-remove src="icons/preview-close.svg" alt="preview-close">
-                                                </div>
-                                                <img class="upload-photo__img" src="" alt="cake">
-                                            </div>
-                                        </div>
-                                        <div class="creature-cake-card__inputs-wrapper">
-                                            <div class="main-input creature-cake-card__input">
-                                                <label class="main-input__label">
-                                                    <div class="text-value-bold main-input__title">Коржи</div>
-                                                    <div class="main-input__input-wrapper">
-                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-shortcake" placeholder="Введите краткое описание">
-                                                        <hr class="main-input__hr">
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            <div class="main-input creature-cake-card__input">
-                                                <label class="main-input__label">
-                                                    <div class="text-value-bold main-input__title">Начинка</div>
-                                                    <div class="main-input__input-wrapper">
-                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-topping" placeholder="Введите краткое описание">
-                                                        <hr class="main-input__hr">
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            <div class="main-input creature-cake-card__input">
-                                                <label class="main-input__label">
-                                                    <div class="text-value-bold main-input__title">Покрытие</div>
-                                                    <div class="main-input__input-wrapper">
-                                                        <input type="text" class="main-input__input main-input__input_number" name="cake-coverage" placeholder="Введите краткое описание">
-                                                        <hr class="main-input__hr">
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="creature-cake-card__bottom">
-                                        <div class="creature-cake-card__bottom-inputs">
-                                            <div class="main-input creature-cake-card__input-price">
-                                                <label class="main-input__label">
-                                                    <div class="text-value-bold main-input__title">Цена за 1 кг</div>
-                                                    <div class="main-input__input-wrapper">
-                                                        <input type="number" class="main-input__input main-input__input_number" name="cake-price" placeholder="0">
-                                                        <hr class="main-input__hr">
-                                                        <span class="main-input__unit">₽</span>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            <div class="main-input creature-cake-card__weights">
-                                                <label class="main-input__label">
-                                                    <div class="text-value-bold main-input__title">Выберите возможный вес</div>
-                                                    <div class="main-input__several-inputs">
-                                                        <div class="main-input__input-wrapper">
-                                                            <input type="number" class="main-input__input main-input__input_number" step="0.01" name="cake-weight-1" placeholder="0">
-                                                            <hr class="main-input__hr">
-                                                            <span class="main-input__unit">кг</span>
-                                                        </div>
-                                                        <button type="button" class="main-input__btn">
-                                                            <object class="main-input__btn-icon" type="image/svg+xml" data="icons/preview-more.svg"></object>
-                                                        </button>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="button button_v2 button_v2_small creature-cake-card__add-btn">Добавить</button>
-                                    </div>
-                                </div>
+                                <!-- карточки добавления товара -->
+                                
                             </div>
+                            <button type="button" class="button button_v2 add-toppings__add-btn">
+                                <!-- <object class="add-toppings__add-btn-icon" type="image/svg+xml" data="icons/spoiler-plus.svg"></object> -->
+                                Добавить вариант
+                            </button>
                         </section>
 
                         <hr class="hr hr_m60">
 
                         <section class="send-form">
-                            <button class="button" type="submit">
+                            <button class="button button_disabled" type="submit" disabled>
                                 Опубликовать профиль
                             </button>
                             <div class="check-form check-form_checkbox-type send-form__check-conditions">

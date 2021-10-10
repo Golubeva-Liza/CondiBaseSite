@@ -4,6 +4,13 @@ function forms (formSelector){
     const form = document.querySelector(formSelector);
     bindPostData(form);
 
+    // document.querySelectorAll('[type="text"]').forEach(item => {
+    //     item.value = 'sadad';
+    // })
+    // document.querySelectorAll('[type="number"]').forEach(item => {
+    //     item.value = '40';
+    // })
+
     //лучше выносить общение с сервером в отдельную функцию, тк разные формы, например, могут отправляться на разные сервера
     
     function bindPostData(form) {
@@ -15,8 +22,15 @@ function forms (formSelector){
             const formData = new FormData(form);//передаетя форма из арг функции
             //!в input необходимо всегда указывать атрибут name, иначе formdata не сможем работать
 
+            form.querySelectorAll('input[type="file"]').forEach(input => {
+                // console.log(input.name);
+                // console.log(input.closest('.upload-photo').querySelector('.upload-photo__img').src);
+                formData.set(input.name, input.value);
+            });
+            console.log(formData.get('0-cake-photo'));//как правильно передать изображения на сервер?
+
+
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
-            console.log(json);
             // const obj2 = {a: 23, B: 50};
             // console.log(Object.entries(obj2));
             //метод берет объект, превращает его в массив, внутри которого массивы из двух элементов ключ-значение
@@ -34,7 +48,7 @@ function forms (formSelector){
             })
             .then(data => data.json())
             .then(data => {
-                console.log(data);//data - данные, которые вернул сервер (промис)
+                // console.log(data);//data - данные, которые вернул сервер (промис)
             })
             .finally(() => {
                 form.reset();

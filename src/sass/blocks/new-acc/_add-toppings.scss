@@ -3,4 +3,25 @@
         margin-bottom: 35px;
         max-width: 270px;
     }
+    &__card{
+        margin-bottom: 40px;
+    }
+    // &__add-btn{
+    //     padding: 0;
+    //     margin: 0;
+    //     border: none; 
+    //     background-color: #fff;
+    //     cursor: pointer;
+    //     display: flex;
+    //     align-items: center;
+    //     &:hover{
+    //         text-decoration: underline;
+    //     }
+    // }
+    &__add-btn-icon{
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        pointer-events: none;
+    }
 }

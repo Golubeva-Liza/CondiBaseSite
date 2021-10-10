@@ -46,7 +46,7 @@ function addCakePhoto(cardElement, options = {}){
             // console.log(ev.target.result);//ev - событие, в котором есть пункт result, где написан путь к файлу в формате base64
             uploadIcon.style.display = "none";
             imgWrapper.style.display = "block";
-            cardImg.setAttribute("src", event.target.result);            
+            cardImg.setAttribute("src", event.target.result);   
         };
         
     })

@@ -21,6 +21,12 @@
     &:hover{
         background: $main-color-hover;
     }
+    &_disabled{
+        background: #ff8c9d;
+        &:hover{
+            background: #ff8c9d;
+        }
+    }
 
     &_small{
         // width: 114px;

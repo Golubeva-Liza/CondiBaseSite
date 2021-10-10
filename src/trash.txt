@@ -402,3 +402,25 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+<!-- <div class="main-input creature-cake-card__num-order">
+    <label class="main-input__label">
+        <div class="text-value-bold main-input__title">Порядок в выдаче</div>
+    </label>
+    <div class="new-select main-input__select">
+        <button type="button" class="new-select__btn">1</button>
+        <ul class="new-select__list">
+            <li class="new-select__list-item" data-value="1">1</li>
+            <li class="new-select__list-item" data-value="2">2</li>
+            <li class="new-select__list-item" data-value="3">3</li>
+        </ul>
+        ы
+        <input class="new-select__input-hidden" type="text" name="cake-num-order" value="">
+    </div>
+    <hr class="main-input__hr">
+</div> -->

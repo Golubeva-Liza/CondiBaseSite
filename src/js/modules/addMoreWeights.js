@@ -1,22 +1,44 @@
-function addMoreWeights (parentSelector) {
-    const parent = document.querySelector(parentSelector);
+function addMoreWeights (parent) {
     const inputsWrapper = parent.querySelector('.main-input__several-inputs');
     let count = 1;
+    const parentCardNum = parent.closest('.creature-cake-card').getAttribute("data-cakecard-num");
 
     inputsWrapper.addEventListener('click', (e) => {
-        if(e.target.classList == 'main-input__btn'){
+        if(e.target.getAttribute('data-btn') == 'addWeight'){
             count++;
-            const newInput = document.createElement('div');
-            newInput.classList.add('main-input__input-wrapper');
-            newInput.innerHTML = `
-                <input type="number" class="main-input__input main-input__input_number" step="0.01" name="cake-weight-${count}" placeholder="0">
-                <hr class="main-input__hr">
-                <span class="main-input__unit">кг</span>
-            `;
-            
-            inputsWrapper.append(newInput);
-            e.target.remove();
-            inputsWrapper.append(e.target);
+
+            if (count === 2){
+                const deleteBtn = `
+                    <button data-btn="deleteWeight" type="button" class="main-input__btn main-input__btn-delete">
+                        <object class="main-input__btn-icon" type="image/svg+xml" data="icons/deleteItem.svg"></object>
+                    </button>
+                `;
+                e.target.insertAdjacentHTML("afterend", deleteBtn);
+            }
+
+            const newInput = `
+                <div class="main-input__input-wrapper">
+                    <input type="number" class="main-input__input main-input__input_number" step="0.01" name="${parentCardNum}-cake-weight-${count}" placeholder="0">
+                    <hr class="main-input__hr">
+                    <span class="main-input__unit">кг</span>
+                </div>
+            `;            
+            e.target.insertAdjacentHTML("beforeBegin", newInput);//сюда надо помещать не элемент, а текст html
+        }
+
+        if(e.target.getAttribute('data-btn') == 'deleteWeight'){
+            count--;
+
+            const allInputs = inputsWrapper.querySelectorAll('.main-input__input-wrapper');
+            allInputs.forEach((item, id) => {
+                if (id + 1 === allInputs.length){
+                    item.remove();
+                }
+            });
+
+            if (count === 1){
+                inputsWrapper.querySelector('[data-btn="deleteWeight"]').remove();
+            }
         }
     })
 }

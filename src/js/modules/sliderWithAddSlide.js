@@ -1,3 +1,5 @@
+import addCakePhoto from './addCakePhoto';
+
 function sliderWithAddSlide (){
     $('.slider').slick({
         arrows: true,
@@ -32,6 +34,10 @@ function sliderWithAddSlide (){
     $('.js-add-slide').on('click', function() {
         slideIndex++;
         $('.slider').slick('slickAdd', slide);
+        const newSlide = document.querySelector('.slick-track').lastChild;
+        addCakePhoto(newSlide, {
+            accept: ['.png', '.jpg', '.jpeg'] //какие типы файлов поддерживаются
+        });
     });
 
     $('.js-remove-slide').on('click', function() {

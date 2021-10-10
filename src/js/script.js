@@ -17,6 +17,10 @@ import addMoreWeights from './modules/addMoreWeights';
 import addCakePhoto from './modules/addCakePhoto';
 import sliderWithAddSlide from './modules/sliderWithAddSlide';
 import validationForm from './modules/validationForm';
+import chooseDeliveryWay from './modules/chooseDeliveryWay';
+import NewCakeCard from './modules/creatureCakeCard';
+import addNewToppingCard from './modules/addNewToppingCard';
+import deleteToppingCard from './modules/deleteToppingCard';
 
 
 
@@ -52,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         variableWidth: true,
                     });
                 });
-                pagination('cardsWrapper', bakerCardsInfo, 2);//передается id без решетки, массив данных (каждый item - класс)
+                pagination('cardsWrapper', bakerCardsInfo, 3);//передается id без решетки, массив данных (каждый item - класс)
             });
         changeRadio(document.querySelector('.sort-form__check-rating'));
         changeRadio(document.querySelector('.sort-form__check-level'));
@@ -102,12 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if(window.location.pathname == "/newAcc.html"){
+        new NewCakeCard(0).writeHtml('.add-toppings__cards-wrapper');
         newSelect('.header__select');
         newSelect('.header__user-select');
-        newSelect('.main-input__select');
+        
         forms('.new-acc-form');
 
-        addMoreWeights('.creature-cake-card__weights');
+        newSelect('.main-input__select');
+        addMoreWeights(document.querySelector('.creature-cake-card__weights'));
         addCakePhoto(document.querySelector('.creature-cake-card'), {
             accept: ['.png', '.jpg', '.jpeg'] //какие типы файлов поддерживаются
         });
@@ -124,5 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         validationForm(document.querySelector('button[type="submit"]'));
+        chooseDeliveryWay();
+        addNewToppingCard();
+        deleteToppingCard('.add-toppings__cards-wrapper');
     }
 });
