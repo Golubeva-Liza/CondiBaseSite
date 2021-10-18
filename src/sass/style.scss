@@ -143,7 +143,16 @@ html, body {
         margin-bottom: 5px;
     }
 }
-
+.loading{
+   display: flex;
+   justify-content: center;
+   img{
+      width: 300px;
+   }
+}
+.hide{
+   display: none !important;
+}
 
 
 

@@ -23,7 +23,7 @@
                         <div class="sort-form__radius">
                             <div class="sort-form__radius-item">1</div>
                             <div class="sort-form__radius-item">5</div>
-                            <div class="sort-form__radius-item sort-form__radius-item_selected">10</div>
+                            <div class="sort-form__radius-item">10</div>
                             <div class="sort-form__radius-item">25</div>
                             <div class="sort-form__radius-item">50</div>
                             <div class="sort-form__radius-item">100</div>
@@ -43,17 +43,17 @@
                         <div class="sort-form__title">Уровень мастерства</div>
                         <div class="check-form sort-form__check-level">
                             <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
+                                <input class="check-form__input" name="level-beginner" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Начинающий
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
+                                <input class="check-form__input" name="level-amateur" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Любитель
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="level" type="radio">
+                                <input class="check-form__input" name="level-pro" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Профи
                             </label>
@@ -62,18 +62,18 @@
                         <div class="sort-form__title">Средняя стоимость торта, 1кг</div>
                         <div class="double-range-slider sort-form__double-range-slider">
                             <div class="double-range-slider__track"></div>
-                            <input class="double-range-slider__input" type="range" min="100" max="10000" value="800" id="range-slider-1">
-                            <input class="double-range-slider__input" type="range" min="100" max="10000" value="8000" id="range-slider-2">
+                            <input class="double-range-slider__input" name="price-min" type="range" min="100" max="10000" value="800" id="range-slider-1">
+                            <input class="double-range-slider__input" name="price-max" type="range" min="100" max="10000" value="8000" id="range-slider-2">
                         </div>
                         <div class="double-range-slider__values">
                             <div class="value-box double-range-slider__min-value">
                                 <span class="value-box__span">от</span>
-                                <input class="value-box__input" type="number" name="price" min="100" max="10000" value="1000" id="range-1">
+                                <input class="value-box__input" type="number" name="text-price-min" min="100" max="10000" value="1000" id="range-1">
                                 <span class="value-box__span">₽</span>
                             </div>
                             <div class="value-box double-range-slider__max-value">
                                 <span class="value-box__span">до</span>
-                                <input class="value-box__input" type="number" name="price" min="100" max="10000" value="8000" id="range-2">
+                                <input class="value-box__input" type="number" name="text-price-max" min="100" max="10000" value="8000" id="range-2">
                                 <span class="value-box__span">₽</span>
                             </div>
                         </div>
@@ -81,22 +81,22 @@
                         <div class="sort-form__title">Рейтинг</div>
                         <div class="check-form sort-form__check-rating">
                             <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
+                                <input class="check-form__input" name="rating-4.5" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Не ниже 4,5 ☆
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
+                                <input class="check-form__input" name="rating-4.0" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Не ниже 4,0 ☆
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
+                                <input class="check-form__input" name="rating-3.5" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Не ниже 3,5 ☆
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="rating" type="radio">
+                                <input class="check-form__input" name="rating-3.0" type="radio">
                                 <span data-box="radio" class="check-form__box"></span>
                                 Не ниже 3,0 ☆
                             </label>
@@ -106,22 +106,22 @@
                         <input class="grey-wrapper sort-form__search-input" type="text" placeholder="Поиск по #тегу...">
                         <div class="check-form sort-form__check-features">
                             <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
+                                <input class="check-form__input" name="features-minimalism" type="checkbox">
                                 <span class="check-form__box"></span>
                                 Минимализм
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
+                                <input class="check-form__input" name="features-exclusive" type="checkbox">
                                 <span class="check-form__box"></span>
                                 Эксклюзивный
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
+                                <input class="check-form__input" name="features-unusual" type="checkbox">
                                 <span class="check-form__box"></span>
                                 Торт необычной формы
                             </label>
                             <label class="check-form__label">
-                                <input class="check-form__input" name="features" type="checkbox">
+                                <input class="check-form__input" name="features-multi-tiered" type="checkbox">
                                 <span class="check-form__box"></span>
                                 Многоярусный торт
                             </label>
@@ -136,20 +136,6 @@
                                 <div class="result-search__how-many-find">
                                     Найдено <span>23 кондитера</span> рядом с вами.
                                 </div>
-                                <!-- <div class="select-block result-search__select-inner">
-                                    <div class="select-block__inner">
-                                        <div class="select-block__header">
-                                            <span class="select-item">Рекомендованные</span>
-                                        </div>
-                                        <div class="select-block__body">
-                                            <div class="select-block__item">Рекомендованные</div>
-                                            <div class="select-block__item">Сначала дешевле</div>
-                                            <div class="select-block__item">Сначала дороже</div>
-                                            <div class="select-block__item">По убыванию рейтинга</div>
-                                            <div class="select-block__item">Сначала ближе ко мне</div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="new-select result-search__select-inner">
                                     <button  class="new-select__btn">Рекомендованные</button>
                                     <ul class="new-select__list">
@@ -168,8 +154,11 @@
                             <div class="result-search__cards-inner" id='cardsWrapper'>
                                 
                             </div>
-                            <div class="list" id="list"></div>
-                            <div class="see-more result-search__bottom-inner">
+                            <!-- загрузка контента -->
+                            <div class="loading" id="loading">
+                              <img src="./icons/loading.svg" alt="loading">
+                            </div>
+                            <div id="seeMore" class="see-more result-search__bottom-inner hide">
                                 <div class="download-more result-search__download-more">
                                     <div class="download-more__circle"></div>
                                     <div class="download-more__circle"></div>
