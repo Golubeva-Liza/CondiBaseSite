@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardsWrapper = document.querySelector('#cardsWrapper');
       cardsWrapper.classList.add('hide');
 
-      fetch('http://localhost:3004/bakerCards') //придет массив с объектами карточек
+      fetch('http://localhost:3004/bakerCards') //придет массив с объектами карточек lavro.ru/365123/test.php
          .then(data => data.json())
          .then(res => {
             //сколько будет карточек на сервере - столько раз их создаст
@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
                rating,
                images,
                level,
-               lenght,
+               distance,
                price,
                profileLink
             }) => {
-               bakerCardsInfo.push(new BakerCards(avatar, name, rating, images, level, lenght, price, profileLink));
+               bakerCardsInfo.push(new BakerCards(avatar, name, rating, images, level, distance, price, profileLink));
             });
             pagination('cardsWrapper', bakerCardsInfo, 3); //передается id без решетки, массив данных (каждый item - класс)
             filterCards(res);

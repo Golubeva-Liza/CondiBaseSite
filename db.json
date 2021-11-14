@@ -18,7 +18,7 @@
         "img/bakers/Ekaterina/cake11.jpg"
       ],
       "level": "любитель",
-      "lenght": 4,
+      "distance": 4,
       "price": 1800,
       "profileLink": "profile.html"
     },
@@ -34,9 +34,9 @@
         "img/bakers/Maria/cake5.jpg"
       ],
       "level": "профи",
-      "lenght": 3,
+      "distance": 3,
       "price": 2300,
-      "profileLink": "#"
+      "profileLink": "profile.html"
     },
     {
       "avatar": "img/bakers/Evgenia/ava.jpg",
@@ -52,9 +52,9 @@
         "img/bakers/Evgenia/cake7.jpg"
       ],
       "level": "любитель",
-      "lenght": 4,
+      "distance": 4,
       "price": 1700,
-      "profileLink": "#"
+      "profileLink": "profile.html"
     },
     {
       "avatar": "img/bakers/Olga/ava.jpg",
@@ -70,9 +70,9 @@
         "img/bakers/Olga/cake7.jpg"
       ],
       "level": "любитель",
-      "lenght": 5.2,
+      "distance": 5.2,
       "price": 1500,
-      "profileLink": "#"
+      "profileLink": "profile.html"
     },
     {
       "avatar": "img/bakers/Polina/ava.jpg",
@@ -89,9 +89,9 @@
         "img/bakers/Polina/cake8.jpg"
       ],
       "level": "профи",
-      "lenght": 23,
+      "distance": 23,
       "price": 3500,
-      "profileLink": "#"
+      "profileLink": "profile.html"
     },
     {
       "avatar": "img/bakers/Irina/ava.jpg",
@@ -109,9 +109,9 @@
         "img/bakers/Irina/cake9.jpg"
       ],
       "level": "любитель",
-      "lenght": 16,
+      "distance": 16,
       "price": 2300,
-      "profileLink": "#"
+      "profileLink": "profile.html"
     },
     {
       "avatar": "img/bakers/Elizaveta/ava.jpg",
@@ -128,9 +128,94 @@
         "img/bakers/Elizaveta/cake8.jpg"
       ],
       "level": "любитель",
-      "lenght": 9,
+      "distance": 9,
       "price": 1600,
-      "profileLink": "#"
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/ava-example.jpg",
+      "name": "Ольга",
+      "rating": 4.4,
+      "images": [
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg"
+      ],
+      "level": "начинающий",
+      "distance": 13,
+      "price": 1500,
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/ava-example.jpg",
+      "name": "Елена",
+      "rating": 4.0,
+      "images": [
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg"
+      ],
+      "level": "начинающий",
+      "distance": 5,
+      "price": 1200,
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/ava-example.jpg",
+      "name": "Анна",
+      "rating": 4.8,
+      "images": [
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg"
+      ],
+      "level": "любитель",
+      "distance": 24,
+      "price": 1750,
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/ava-example.jpg",
+      "name": "Людмила",
+      "rating": 4.3,
+      "images": [
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg"
+      ],
+      "level": "начинающий",
+      "distance": 16,
+      "price": 1350,
+      "profileLink": "profile.html"
+    },
+    {
+      "avatar": "img/bakers/ava-example.jpg",
+      "name": "Ольга",
+      "rating": 4.2,
+      "images": [
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg",
+        "img/bakers/cake-example.jpg"
+      ],
+      "level": "любитель",
+      "distance": 42,
+      "price": 1870,
+      "profileLink": "profile.html"
     }
   ],
   "comments": [

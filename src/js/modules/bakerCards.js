@@ -1,12 +1,12 @@
 //____________________шаблонизация карточки кондитера_______________________________________
 export default class BakerCards {
-    constructor (avatar, name, rating, images, level, lenght, price, profileLink){
+    constructor (avatar, name, rating, images, level, distance, price, profileLink){
         this.avatar = avatar;
         this.name = name;
         this.rating = rating;
         this.images = images;//массив
         this.level = level;
-        this.lenght = lenght;
+        this.distance = distance;
         this.price = price;
         this.profileLink = profileLink;
     }
@@ -61,7 +61,7 @@ export default class BakerCards {
                 </div>
                 <!-- менять расстояние -->
                 <div class="baker-card__info-item">
-                    Расстояние: <span class="text-value">${this.lenght} км</span>
+                    Расстояние: <span class="text-value">${this.distance} км</span>
                 </div>
                 <!-- менять цену -->
                 <div class="baker-card__info-item">
